@@ -16,5 +16,15 @@ namespace NoteApp.View
         {
             InitializeComponent();
         }
+
+        private void splitContainer1_Panel2_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void DateTimePickerModified_ValueChanged(object sender, EventArgs e)
+        {
+
+        }
     }
 }
