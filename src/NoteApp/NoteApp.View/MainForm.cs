@@ -17,14 +17,26 @@ namespace NoteApp.View
             InitializeComponent();
         }
 
-        private void splitContainer1_Panel2_Paint(object sender, PaintEventArgs e)
+        private void DateTimePickerModified_ValueChanged(object sender, EventArgs e)
         {
 
         }
 
-        private void DateTimePickerModified_ValueChanged(object sender, EventArgs e)
+        private void AddNote()
         {
+            var noteForm = new NoteForm();
+            noteForm.ShowDialog();
+        }
 
+            private void AboutToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+                AboutForm af = new AboutForm();
+                af.Show();
+        }
+
+        private void IconButtonAdd_Click(object sender, EventArgs e)
+        {
+            AddNote();
         }
     }
 }
