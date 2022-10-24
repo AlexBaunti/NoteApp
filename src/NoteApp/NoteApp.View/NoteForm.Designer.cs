@@ -29,6 +29,7 @@ namespace NoteApp.View
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(NoteForm));
             this.TitleLabel = new System.Windows.Forms.Label();
             this.CategoryLabel = new System.Windows.Forms.Label();
             this.CreatedLabel = new System.Windows.Forms.Label();
@@ -172,8 +173,9 @@ namespace NoteApp.View
             this.Controls.Add(this.CreatedLabel);
             this.Controls.Add(this.CategoryLabel);
             this.Controls.Add(this.TitleLabel);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "NoteForm";
-            this.Text = "NoteForm";
+            this.Text = "Edit Note";
             this.ResumeLayout(false);
             this.PerformLayout();
 

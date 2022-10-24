@@ -22,10 +22,21 @@ namespace NoteApp.View
 
         }
 
-        private void AboutToolStripMenuItem_Click(object sender, EventArgs e)
+        private void AddNote()
+        {
+            var noteForm = new NoteForm();
+            noteForm.ShowDialog();
+        }
+
+            private void AboutToolStripMenuItem_Click(object sender, EventArgs e)
         {
                 AboutForm af = new AboutForm();
                 af.Show();
+        }
+
+        private void IconButtonAdd_Click(object sender, EventArgs e)
+        {
+            AddNote();
         }
     }
 }

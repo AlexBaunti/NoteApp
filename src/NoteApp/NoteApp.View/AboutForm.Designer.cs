@@ -29,6 +29,7 @@ namespace NoteApp.View
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(AboutForm));
             this.NoteAppLabel = new System.Windows.Forms.Label();
             this.VersionLabel = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
@@ -135,8 +136,12 @@ namespace NoteApp.View
             this.Controls.Add(this.label1);
             this.Controls.Add(this.VersionLabel);
             this.Controls.Add(this.NoteAppLabel);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
+            this.MaximumSize = new System.Drawing.Size(420, 270);
+            this.MinimumSize = new System.Drawing.Size(420, 270);
             this.Name = "AboutForm";
-            this.Text = "AboutForm";
+            this.Text = "About";
             this.ResumeLayout(false);
             this.PerformLayout();
 
