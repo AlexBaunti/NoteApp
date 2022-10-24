@@ -10,22 +10,16 @@ using System.Windows.Forms;
 
 namespace NoteApp.View
 {
-    public partial class MainForm : Form
+    public partial class AboutForm : Form
     {
-        public MainForm()
+        public AboutForm()
         {
             InitializeComponent();
         }
 
-        private void DateTimePickerModified_ValueChanged(object sender, EventArgs e)
+        private void CcLabel_Click(object sender, EventArgs e)
         {
 
-        }
-
-        private void AboutToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-                AboutForm af = new AboutForm();
-                af.Show();
         }
     }
 }
