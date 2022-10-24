@@ -38,10 +38,9 @@ namespace NoteApp.View
             this.DateTimePickerModified = new System.Windows.Forms.DateTimePicker();
             this.DateTimePickerCreated = new System.Windows.Forms.DateTimePicker();
             this.splitContainer1 = new System.Windows.Forms.SplitContainer();
-            this.ShowCategory = new System.Windows.Forms.Label();
-            this.CategoryComboBox = new System.Windows.Forms.ComboBox();
             this.CategoryListBox = new System.Windows.Forms.ListBox();
-            this.MenuStrip = new System.Windows.Forms.MenuStrip();
+            this.CategoryComboBox = new System.Windows.Forms.ComboBox();
+            this.ShowCategory = new System.Windows.Forms.Label();
             this.FileToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.ExtToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.EditToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -50,6 +49,7 @@ namespace NoteApp.View
             this.RemoveNoteToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.HelpToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.AboutToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.MenuStrip = new System.Windows.Forms.MenuStrip();
             ((System.ComponentModel.ISupportInitialize)(this.splitContainer1)).BeginInit();
             this.splitContainer1.Panel1.SuspendLayout();
             this.splitContainer1.Panel2.SuspendLayout();
@@ -163,15 +163,13 @@ namespace NoteApp.View
             this.splitContainer1.SplitterDistance = 286;
             this.splitContainer1.TabIndex = 3;
             // 
-            // ShowCategory
+            // CategoryListBox
             // 
-            this.ShowCategory.AutoSize = true;
-            this.ShowCategory.Font = new System.Drawing.Font("Helvetica", 12F);
-            this.ShowCategory.Location = new System.Drawing.Point(15, 16);
-            this.ShowCategory.Name = "ShowCategory";
-            this.ShowCategory.Size = new System.Drawing.Size(115, 18);
-            this.ShowCategory.TabIndex = 1;
-            this.ShowCategory.Text = "Show Category";
+            this.CategoryListBox.FormattingEnabled = true;
+            this.CategoryListBox.Location = new System.Drawing.Point(18, 50);
+            this.CategoryListBox.Name = "CategoryListBox";
+            this.CategoryListBox.Size = new System.Drawing.Size(250, 420);
+            this.CategoryListBox.TabIndex = 3;
             // 
             // CategoryComboBox
             // 
@@ -182,26 +180,15 @@ namespace NoteApp.View
             this.CategoryComboBox.Size = new System.Drawing.Size(130, 24);
             this.CategoryComboBox.TabIndex = 2;
             // 
-            // CategoryListBox
+            // ShowCategory
             // 
-            this.CategoryListBox.FormattingEnabled = true;
-            this.CategoryListBox.Location = new System.Drawing.Point(18, 50);
-            this.CategoryListBox.Name = "CategoryListBox";
-            this.CategoryListBox.Size = new System.Drawing.Size(250, 420);
-            this.CategoryListBox.TabIndex = 3;
-            // 
-            // MenuStrip
-            // 
-            this.MenuStrip.Font = new System.Drawing.Font("Helvetica", 10F);
-            this.MenuStrip.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.FileToolStripMenuItem,
-            this.EditToolStripMenuItem,
-            this.HelpToolStripMenuItem});
-            this.MenuStrip.Location = new System.Drawing.Point(0, 0);
-            this.MenuStrip.Name = "MenuStrip";
-            this.MenuStrip.Size = new System.Drawing.Size(884, 24);
-            this.MenuStrip.TabIndex = 4;
-            this.MenuStrip.Text = "menuStrip1";
+            this.ShowCategory.AutoSize = true;
+            this.ShowCategory.Font = new System.Drawing.Font("Helvetica", 12F);
+            this.ShowCategory.Location = new System.Drawing.Point(15, 16);
+            this.ShowCategory.Name = "ShowCategory";
+            this.ShowCategory.Size = new System.Drawing.Size(115, 18);
+            this.ShowCategory.TabIndex = 1;
+            this.ShowCategory.Text = "Show Category";
             // 
             // FileToolStripMenuItem
             // 
@@ -214,7 +201,7 @@ namespace NoteApp.View
             // ExtToolStripMenuItem
             // 
             this.ExtToolStripMenuItem.Name = "ExtToolStripMenuItem";
-            this.ExtToolStripMenuItem.Size = new System.Drawing.Size(98, 22);
+            this.ExtToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.ExtToolStripMenuItem.Text = "Exit";
             // 
             // EditToolStripMenuItem
@@ -230,19 +217,19 @@ namespace NoteApp.View
             // AddToolStripMenuItem
             // 
             this.AddToolStripMenuItem.Name = "AddToolStripMenuItem";
-            this.AddToolStripMenuItem.Size = new System.Drawing.Size(161, 22);
+            this.AddToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.AddToolStripMenuItem.Text = "Add";
             // 
             // EditNoteToolStripMenuItem
             // 
             this.EditNoteToolStripMenuItem.Name = "EditNoteToolStripMenuItem";
-            this.EditNoteToolStripMenuItem.Size = new System.Drawing.Size(161, 22);
+            this.EditNoteToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.EditNoteToolStripMenuItem.Text = "Edit Note";
             // 
             // RemoveNoteToolStripMenuItem
             // 
             this.RemoveNoteToolStripMenuItem.Name = "RemoveNoteToolStripMenuItem";
-            this.RemoveNoteToolStripMenuItem.Size = new System.Drawing.Size(161, 22);
+            this.RemoveNoteToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.RemoveNoteToolStripMenuItem.Text = "Remove Note";
             // 
             // HelpToolStripMenuItem
@@ -256,8 +243,21 @@ namespace NoteApp.View
             // AboutToolStripMenuItem
             // 
             this.AboutToolStripMenuItem.Name = "AboutToolStripMenuItem";
-            this.AboutToolStripMenuItem.Size = new System.Drawing.Size(113, 22);
+            this.AboutToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.AboutToolStripMenuItem.Text = "About";
+            // 
+            // MenuStrip
+            // 
+            this.MenuStrip.Font = new System.Drawing.Font("Helvetica", 10F);
+            this.MenuStrip.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.FileToolStripMenuItem,
+            this.EditToolStripMenuItem,
+            this.HelpToolStripMenuItem});
+            this.MenuStrip.Location = new System.Drawing.Point(0, 0);
+            this.MenuStrip.Name = "MenuStrip";
+            this.MenuStrip.Size = new System.Drawing.Size(884, 24);
+            this.MenuStrip.TabIndex = 4;
+            this.MenuStrip.Text = "menuStrip1";
             // 
             // MainForm
             // 
@@ -296,7 +296,6 @@ namespace NoteApp.View
         private System.Windows.Forms.ListBox CategoryListBox;
         private System.Windows.Forms.ComboBox CategoryComboBox;
         private System.Windows.Forms.Label ShowCategory;
-        private System.Windows.Forms.MenuStrip MenuStrip;
         private System.Windows.Forms.ToolStripMenuItem FileToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem ExtToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem EditToolStripMenuItem;
@@ -305,6 +304,7 @@ namespace NoteApp.View
         private System.Windows.Forms.ToolStripMenuItem RemoveNoteToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem HelpToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem AboutToolStripMenuItem;
+        private System.Windows.Forms.MenuStrip MenuStrip;
     }
 }
 
