@@ -135,7 +135,6 @@ namespace NoteApp.View
             this.DateTimePickerModified.Name = "DateTimePickerModified";
             this.DateTimePickerModified.Size = new System.Drawing.Size(100, 24);
             this.DateTimePickerModified.TabIndex = 2;
-            this.DateTimePickerModified.ValueChanged += new System.EventHandler(this.DateTimePickerModified_ValueChanged);
             // 
             // DateTimePickerCreated
             // 
