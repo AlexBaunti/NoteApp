@@ -123,6 +123,22 @@ namespace NoteApp.View
             }
         }
 
+        private void OkButton_Click(object sender, EventArgs e)
+        {
+            if (CategoryComboBox.SelectedIndex == -1)
+            {
+                MessageBox.Show("Выберите категорию");
+                return;
+            }
+            if (CheckFormOnErrors())
+            {
+                UpdateNote();
+                _note = _noteCopy;
+                DialogResult = DialogResult.OK;
+                this.Close();
+            }
+        }
+
         private void CancelButton_Click(object sender, EventArgs e)
         {
             DialogResult = DialogResult.Cancel;
