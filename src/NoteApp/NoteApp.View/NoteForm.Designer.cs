@@ -52,7 +52,6 @@ namespace NoteApp.View
             this.TitleLabel.Size = new System.Drawing.Size(44, 22);
             this.TitleLabel.TabIndex = 0;
             this.TitleLabel.Text = "Title:";
-            this.TitleLabel.Click += new System.EventHandler(this.label1_Click);
             // 
             // CategoryLabel
             // 
@@ -63,7 +62,6 @@ namespace NoteApp.View
             this.CategoryLabel.Size = new System.Drawing.Size(79, 22);
             this.CategoryLabel.TabIndex = 0;
             this.CategoryLabel.Text = "Category:";
-            this.CategoryLabel.Click += new System.EventHandler(this.label2_Click);
             // 
             // CreatedLabel
             // 
@@ -74,7 +72,6 @@ namespace NoteApp.View
             this.CreatedLabel.Size = new System.Drawing.Size(70, 22);
             this.CreatedLabel.TabIndex = 0;
             this.CreatedLabel.Text = "Created:";
-            this.CreatedLabel.Click += new System.EventHandler(this.label2_Click);
             // 
             // ModifiedLlabel
             // 
@@ -85,7 +82,6 @@ namespace NoteApp.View
             this.ModifiedLlabel.Size = new System.Drawing.Size(77, 22);
             this.ModifiedLlabel.TabIndex = 0;
             this.ModifiedLlabel.Text = "Modified:";
-            this.ModifiedLlabel.Click += new System.EventHandler(this.label2_Click);
             // 
             // DateTimePickerModified
             // 
@@ -114,7 +110,6 @@ namespace NoteApp.View
             this.CategoryComboBox.Name = "CategoryComboBox";
             this.CategoryComboBox.Size = new System.Drawing.Size(354, 23);
             this.CategoryComboBox.TabIndex = 2;
-            this.CategoryComboBox.SelectedIndexChanged += new System.EventHandler(this.comboBox1_SelectedIndexChanged);
             // 
             // NoteTextBox
             // 

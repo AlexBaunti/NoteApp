@@ -1,8 +1,4 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace NoteApp.Model
 {
@@ -138,6 +134,10 @@ namespace NoteApp.Model
             Title = name;
             Category = category;
             Text = text;
+        }
+
+        public Note()
+        {
         }
 
         /// <summary>
