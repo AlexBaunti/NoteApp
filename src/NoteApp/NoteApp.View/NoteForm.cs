@@ -73,6 +73,56 @@ namespace NoteApp.View
             NoteTextBox.Text = _noteCopy.Text;
         }
 
+        /// <summary>
+        /// Метод обновления заметки.
+        /// </summary>
+        private void UpdateNote()
+        {
+            foreach (var category in Enum.GetValues(typeof(NoteCategory)))
+            {
+                if (CategoryComboBox.SelectedItem.ToString() == category.ToString())
+                {
+                    _noteCopy.Category = (NoteCategory)category;
+                }
+            }
+            _noteCopy.Title = TitleTextBox.Text;
+            _noteCopy.Text = NoteTextBox.Text;
+        }
+
+        /// <summary>
+        /// Метод обработки и валидации названия заметки.
+        /// </summary>
+        private void TitleTextBox_TextChanged(object sender, EventArgs e)
+        {
+            try
+            {
+                _noteCopy.Title = TitleTextBox.Text;
+                TitleTextBox.BackColor = _correctColor;
+                _noteError = "";
+            }
+            catch (ArgumentException exception)
+            {
+                TitleTextBox.BackColor = _errorColor;
+                _noteError = exception.Message;
+            }
+        }
+
+        /// <summary>
+        /// Проверка на наличие ошибок в форме.
+        /// </summary>
+        private bool CheckFormOnErrors()
+        {
+            if (_noteError != "")
+            {
+                MessageBox.Show(_noteError);
+                return false;
+            }
+            else
+            {
+                return true;
+            }
+        }
+
         private void CancelButton_Click(object sender, EventArgs e)
         {
             DialogResult = DialogResult.Cancel;
