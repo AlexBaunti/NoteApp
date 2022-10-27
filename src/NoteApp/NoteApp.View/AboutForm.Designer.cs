@@ -79,7 +79,6 @@ namespace NoteApp.View
             this.CcLabel.Size = new System.Drawing.Size(134, 17);
             this.CcLabel.TabIndex = 0;
             this.CcLabel.Text = "2022 Alex Izbyshev ©";
-            this.CcLabel.Click += new System.EventHandler(this.CcLabel_Click);
             // 
             // label2
             // 

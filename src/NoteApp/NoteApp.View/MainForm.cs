@@ -28,7 +28,7 @@ namespace NoteApp.View
             _project = new Project();
             ///_project = ProjectSerializer.LoadFromFile();
             _currentNotes = _project.Notes;
-            ///CategoryComboBox.SelectedIndex = 1;
+            CategoryComboBox.SelectedIndex = 0;
             ClearSelectedNote();
             UpdateListBox();
         }

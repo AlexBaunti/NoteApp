@@ -74,6 +74,7 @@ namespace NoteApp.View
             this.NoteTextBox.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
             this.NoteTextBox.Size = new System.Drawing.Size(520, 400);
             this.NoteTextBox.TabIndex = 0;
+            this.NoteTextBox.Text = "о";
             // 
             // NameLabel
             // 
