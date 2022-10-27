@@ -46,7 +46,7 @@ namespace NoteApp.View
             this.CategoryComboBox = new System.Windows.Forms.ComboBox();
             this.ShowCategory = new System.Windows.Forms.Label();
             this.FileToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.ExtToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.ExitToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.EditToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.AddToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.EditNoteToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -74,7 +74,6 @@ namespace NoteApp.View
             this.NoteTextBox.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
             this.NoteTextBox.Size = new System.Drawing.Size(520, 400);
             this.NoteTextBox.TabIndex = 0;
-            this.NoteTextBox.Text = "о";
             // 
             // NameLabel
             // 
@@ -257,16 +256,17 @@ namespace NoteApp.View
             // FileToolStripMenuItem
             // 
             this.FileToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.ExtToolStripMenuItem});
+            this.ExitToolStripMenuItem});
             this.FileToolStripMenuItem.Name = "FileToolStripMenuItem";
             this.FileToolStripMenuItem.Size = new System.Drawing.Size(40, 21);
             this.FileToolStripMenuItem.Text = "File";
             // 
-            // ExtToolStripMenuItem
+            // ExitToolStripMenuItem
             // 
-            this.ExtToolStripMenuItem.Name = "ExtToolStripMenuItem";
-            this.ExtToolStripMenuItem.Size = new System.Drawing.Size(97, 22);
-            this.ExtToolStripMenuItem.Text = "Exit";
+            this.ExitToolStripMenuItem.Name = "ExitToolStripMenuItem";
+            this.ExitToolStripMenuItem.Size = new System.Drawing.Size(97, 22);
+            this.ExitToolStripMenuItem.Text = "Exit";
+            this.ExitToolStripMenuItem.Click += new System.EventHandler(this.ExitToolStripMenuItem_Click);
             // 
             // EditToolStripMenuItem
             // 
@@ -365,7 +365,7 @@ namespace NoteApp.View
         private System.Windows.Forms.ComboBox CategoryComboBox;
         private System.Windows.Forms.Label ShowCategory;
         private System.Windows.Forms.ToolStripMenuItem FileToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem ExtToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem ExitToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem EditToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem AddToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem EditNoteToolStripMenuItem;
