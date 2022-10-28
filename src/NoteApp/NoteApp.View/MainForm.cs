@@ -97,8 +97,7 @@ namespace NoteApp.View
             Note note = _project.Notes[index];
             index = FindNoteIndex(index);
             var result = MessageBox.Show("Delete Note " + "\"" + CategoryListBox.SelectedItem.ToString()
-                + "\"" + "?", "Successfully Deleted", MessageBoxButtons.OKCancel, MessageBoxIcon.Information,
-                MessageBoxDefaultButton.Button1);
+                + "\"" + "?", "Confirm Deletion", MessageBoxButtons.OKCancel, MessageBoxIcon.Information, MessageBoxDefaultButton.Button1);
             if (result == DialogResult.OK)
             {
                 _project.Notes.RemoveAt(index);
@@ -143,18 +142,6 @@ namespace NoteApp.View
             TextLabel.Text = "";
             DateTimePickerCreated.Visible = false;
             DateTimePickerModified.Visible = false;
-        }
-
-        private void NotesListBox_SelectedIndexChanged(object sender, EventArgs e)
-        {
-            if (CategoryListBox.SelectedIndex == -1)
-            {
-                ClearSelectedNote();
-            }
-            else
-            {
-                UpdateSelectedNote(CategoryListBox.SelectedIndex);
-            }
         }
 
         /// <summary>
