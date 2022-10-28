@@ -190,6 +190,7 @@ namespace NoteApp.View
             this.IconButtonEdit.Size = new System.Drawing.Size(48, 48);
             this.IconButtonEdit.TabIndex = 4;
             this.IconButtonEdit.UseVisualStyleBackColor = true;
+            this.IconButtonEdit.Click += new System.EventHandler(this.IconButtonEdit_Click);
             // 
             // IconButtonDel
             // 
@@ -203,6 +204,7 @@ namespace NoteApp.View
             this.IconButtonDel.Size = new System.Drawing.Size(48, 48);
             this.IconButtonDel.TabIndex = 4;
             this.IconButtonDel.UseVisualStyleBackColor = true;
+            this.IconButtonDel.Click += new System.EventHandler(this.IconButtonDel_Click);
             // 
             // IconButtonAdd
             // 
@@ -231,6 +233,7 @@ namespace NoteApp.View
             this.CategoryListBox.Name = "CategoryListBox";
             this.CategoryListBox.Size = new System.Drawing.Size(250, 400);
             this.CategoryListBox.TabIndex = 3;
+            this.CategoryListBox.SelectedIndexChanged += new System.EventHandler(this.CategoryListBox_SelectedIndexChanged);
             // 
             // CategoryComboBox
             // 
@@ -242,6 +245,7 @@ namespace NoteApp.View
             this.CategoryComboBox.Name = "CategoryComboBox";
             this.CategoryComboBox.Size = new System.Drawing.Size(128, 23);
             this.CategoryComboBox.TabIndex = 2;
+            this.CategoryComboBox.SelectedIndexChanged += new System.EventHandler(this.CategoryComboBox_SelectedIndexChanged);
             // 
             // ShowCategory
             // 
@@ -283,18 +287,21 @@ namespace NoteApp.View
             this.AddToolStripMenuItem.Name = "AddToolStripMenuItem";
             this.AddToolStripMenuItem.Size = new System.Drawing.Size(154, 22);
             this.AddToolStripMenuItem.Text = "Add";
+            this.AddToolStripMenuItem.Click += new System.EventHandler(this.AddToolStripMenuItem_Click);
             // 
             // EditNoteToolStripMenuItem
             // 
             this.EditNoteToolStripMenuItem.Name = "EditNoteToolStripMenuItem";
             this.EditNoteToolStripMenuItem.Size = new System.Drawing.Size(154, 22);
             this.EditNoteToolStripMenuItem.Text = "Edit Note";
+            this.EditNoteToolStripMenuItem.Click += new System.EventHandler(this.EditNoteToolStripMenuItem_Click);
             // 
             // RemoveNoteToolStripMenuItem
             // 
             this.RemoveNoteToolStripMenuItem.Name = "RemoveNoteToolStripMenuItem";
             this.RemoveNoteToolStripMenuItem.Size = new System.Drawing.Size(154, 22);
             this.RemoveNoteToolStripMenuItem.Text = "Remove Note";
+            this.RemoveNoteToolStripMenuItem.Click += new System.EventHandler(this.RemoveNoteToolStripMenuItem_Click);
             // 
             // HelpToolStripMenuItem
             // 

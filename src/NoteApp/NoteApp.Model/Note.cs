@@ -53,7 +53,7 @@ namespace NoteApp.Model
             {
                 if (value.Length > NOTETITLELIMIT)
                 {
-                    throw new ArgumentException("max title length = 50");
+                    throw new ArgumentException("Max Title Length = 50");
                 }
                 if (value == string.Empty)
                 {

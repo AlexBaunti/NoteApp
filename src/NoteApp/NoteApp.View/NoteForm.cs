@@ -35,6 +35,10 @@ namespace NoteApp.View
         public NoteForm()
         {
             InitializeComponent();
+            foreach (var value in Enum.GetValues(typeof(NoteCategory)))
+            {
+                CategoryComboBox.Items.Add(value.ToString());
+            }
         }
 
         /// <summary>
@@ -123,7 +127,13 @@ namespace NoteApp.View
             }
         }
 
-        private void OkButton_Click(object sender, EventArgs e)
+        private void CancelButton_Click(object sender, EventArgs e)
+        {
+            DialogResult = DialogResult.Cancel;
+            this.Close();
+        }
+
+        private void SaveButton_Click(object sender, EventArgs e)
         {
             if (CategoryComboBox.SelectedIndex == -1)
             {
@@ -137,12 +147,6 @@ namespace NoteApp.View
                 DialogResult = DialogResult.OK;
                 this.Close();
             }
-        }
-
-        private void CancelButton_Click(object sender, EventArgs e)
-        {
-            DialogResult = DialogResult.Cancel;
-            this.Close();
         }
     }
 }

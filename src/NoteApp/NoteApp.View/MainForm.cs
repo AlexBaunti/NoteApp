@@ -28,7 +28,11 @@ namespace NoteApp.View
             _project = new Project();
             _project = ProjectSerializer.LoadFromFile();
             _currentNotes = _project.Notes;
-            CategoryComboBox.SelectedIndex = -1;
+            foreach(var value in Enum.GetValues(typeof(NoteCategory)))
+                {
+                    CategoryComboBox.Items.Add(value.ToString());
+                }
+            CategoryComboBox.SelectedIndex = 0;
             ClearSelectedNote();
             UpdateListBox();
         }
@@ -92,8 +96,8 @@ namespace NoteApp.View
             int currentIndex = index;
             Note note = _project.Notes[index];
             index = FindNoteIndex(index);
-            var result = MessageBox.Show("Do you really want to remove " + "\"" + CategoryListBox.SelectedItem.ToString()
-                + "\"" + "?", "Deleting a note", MessageBoxButtons.OKCancel, MessageBoxIcon.Information,
+            var result = MessageBox.Show("Delete Note " + "\"" + CategoryListBox.SelectedItem.ToString()
+                + "\"" + "?", "Successfully Deleted", MessageBoxButtons.OKCancel, MessageBoxIcon.Information,
                 MessageBoxDefaultButton.Button1);
             if (result == DialogResult.OK)
             {
@@ -141,9 +145,6 @@ namespace NoteApp.View
             DateTimePickerModified.Visible = false;
         }
 
-        /// <summary>
-        /// Метод обновления.
-        /// </summary>
         private void NotesListBox_SelectedIndexChanged(object sender, EventArgs e)
         {
             if (CategoryListBox.SelectedIndex == -1)
@@ -205,9 +206,27 @@ namespace NoteApp.View
         /// </summary>
         /// <param name="sender"></param>
         /// <param name="e"></param>
-        private void NoteListBox_SelectedIndexChanged(object sender, EventArgs e)
+        private void CategoryListBox_SelectedIndexChanged(object sender, EventArgs e)
         {
             UpdateSelectedNote(CategoryListBox.SelectedIndex);
+        }
+
+        /// <summary>
+        /// Метод обновления.
+        /// </summary>
+        private void CategoryComboBox_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            ClearSelectedNote();
+            OutputByCategory();
+            UpdateListBox();
+        }
+
+        /// <summary>
+        /// Выход из приложения через меню.
+        /// </summary>
+        private void ExitToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            this.Close();
         }
 
         /// <summary>
@@ -215,7 +234,7 @@ namespace NoteApp.View
         /// </summary>
         /// <param name="sender"></param>
         /// <param name="e"></param>
-        private void AddNoteToolStripMenuItem_Click(object sender, EventArgs e)
+        private void AddToolStripMenuItem_Click(object sender, EventArgs e)
         {
             AddNote();
             UpdateListBox();
@@ -254,11 +273,6 @@ namespace NoteApp.View
                 af.Show();
         }
 
-        private void ExitToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-            this.Close();
-        }
-
         /// <summary>
         /// Добавление заметки через кнопку.
         /// </summary>
@@ -282,20 +296,13 @@ namespace NoteApp.View
         }
 
         /// <summary>
-        /// Редактирование заметки через кнопку.
+        /// Удаление заметки через кнопку.
         /// </summary>
         /// <param name="sender"></param>
         /// <param name="e"></param>
         private void IconButtonDel_Click(object sender, EventArgs e)
         {
             RemoveNote(CategoryListBox.SelectedIndex);
-            UpdateListBox();
-        }
-
-        private void CategoryComboBox_SelectedIndexChanged(object sender, EventArgs e)
-        {
-            ClearSelectedNote();
-            OutputByCategory();
             UpdateListBox();
         }
     }
