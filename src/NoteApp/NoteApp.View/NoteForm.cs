@@ -13,7 +13,7 @@ namespace NoteApp.View
         private Note _note = new Note();
 
         /// <summary>
-        /// Переменная заметки.
+        /// Копия заметки.
         /// </summary>
         private Note _noteCopy = new Note();
 
@@ -115,7 +115,7 @@ namespace NoteApp.View
         }
 
         /// <summary>
-        /// Проверка на наличие ошибок в форме.
+        /// Проверка на наличие ошибок в полях.
         /// </summary>
         private bool CheckFormOnErrors()
         {
@@ -130,17 +130,32 @@ namespace NoteApp.View
             }
         }
 
+        /// <summary>
+        /// Индикация цвета списка списка категорий.
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
+        private void CategoryComboBox_Click(object sender, EventArgs e)
+        {
+            CategoryComboBox.BackColor = _correctColor;
+        }
+
+        /// <summary>
+        /// Закрыть форму без сохранения.
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void CancelButton_Click(object sender, EventArgs e)
         {
             DialogResult = DialogResult.Cancel;
             Close();
         }
 
-        private void CategoryComboBox_Click(object sender, EventArgs e)
-        {
-            CategoryComboBox.BackColor = _correctColor;
-        }
-
+        /// <summary>
+        /// Сохранить заметку.
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void SaveButton_Click(object sender, EventArgs e)
         {
             if (CategoryComboBox.SelectedIndex == -1)

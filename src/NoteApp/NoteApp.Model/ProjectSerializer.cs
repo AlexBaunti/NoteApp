@@ -14,11 +14,11 @@ namespace NoteApp.Model
     /// </summary>
     public static class ProjectSerializer
     {
-        private const string _fileName = "NotesApp.notes";
+        private const string _fileName = "NoteApp.note";
 
         private static readonly string _folder = Environment.GetFolderPath(
                 Environment.SpecialFolder.ApplicationData) +
-            "\\Izbyshev_NotesApp\\";
+            "\\Izbyshev_NoteApp\\";
 
         private static readonly string _path = _folder + _fileName;
 
