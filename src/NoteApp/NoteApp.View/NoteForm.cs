@@ -20,7 +20,7 @@ namespace NoteApp.View
         /// <summary>
         /// Строка для вывода ошибки.
         /// </summary>
-        private string _noteError;
+        private string _titleError;
 
         /// <summary>
         /// Константа для корректного цвета. 
@@ -30,7 +30,7 @@ namespace NoteApp.View
         /// <summary>
         /// Константа для цвета ошибки.
         /// </summary>
-        private readonly Color _errorColor = Color.LightPink;
+        private readonly Color _errorColor = Color.LightCoral;
         
         public NoteForm()
         {
@@ -39,6 +39,7 @@ namespace NoteApp.View
             {
                 CategoryComboBox.Items.Add(value.ToString());
             }
+            TitleTextBox.Text = "Unnamed Note";
         }
 
         /// <summary>
@@ -94,20 +95,22 @@ namespace NoteApp.View
         }
 
         /// <summary>
-        /// Метод обработки и валидации названия заметки.
+        /// Метод обработки и присвоение названия заметке.
         /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void TitleTextBox_TextChanged(object sender, EventArgs e)
         {
             try
             {
                 _noteCopy.Title = TitleTextBox.Text;
                 TitleTextBox.BackColor = _correctColor;
-                _noteError = "";
+                _titleError = null;
             }
             catch (ArgumentException exception)
             {
                 TitleTextBox.BackColor = _errorColor;
-                _noteError = exception.Message;
+                _titleError = exception.Message;
             }
         }
 
@@ -116,36 +119,47 @@ namespace NoteApp.View
         /// </summary>
         private bool CheckFormOnErrors()
         {
-            if (_noteError != "")
+            if (_titleError == null)
             {
-                MessageBox.Show(_noteError);
-                return false;
+                return true;
             }
             else
             {
-                return true;
+                MessageBox.Show(_titleError);
+                return false;
             }
         }
 
         private void CancelButton_Click(object sender, EventArgs e)
         {
             DialogResult = DialogResult.Cancel;
-            this.Close();
+            Close();
+        }
+
+        private void CategoryComboBox_Click(object sender, EventArgs e)
+        {
+            CategoryComboBox.BackColor = _correctColor;
         }
 
         private void SaveButton_Click(object sender, EventArgs e)
         {
             if (CategoryComboBox.SelectedIndex == -1)
             {
+                CategoryComboBox.BackColor = _errorColor;
                 MessageBox.Show("Выберите категорию");
                 return;
             }
+
             if (CheckFormOnErrors())
             {
                 UpdateNote();
                 _note = _noteCopy;
                 DialogResult = DialogResult.OK;
-                this.Close();
+                Close();
+            }
+            else
+            {
+                return;
             }
         }
     }

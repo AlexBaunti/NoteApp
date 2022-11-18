@@ -13,12 +13,12 @@ namespace NoteApp.Model
             Notes = new List<Note>();
         }
         /// <summary>
-        /// Список с заметками
+        /// Список с заметками.
         /// </summary>
         public List<Note> Notes { get; set; } = new List<Note>();
 
         // <summary>
-        /// Функция сортировки всех заметок по убыванию
+        /// Функция сортировки всех заметок по дате редактирования.
         /// </summary>
         public List<Note> SortByModificationTime(List<Note> notes)
         {
@@ -28,7 +28,7 @@ namespace NoteApp.Model
         }
 
         /// <summary>
-        /// Функция выборки всех заметок по передаваемой категории
+        /// Функция поиска заметок по категории.
         /// </summary>
         /// <param name="notes">Передаваемый список заметок</param>
         /// <param name="noteCategory">Передаваемая категория заметки</param>

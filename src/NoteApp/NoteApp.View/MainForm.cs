@@ -13,12 +13,12 @@ namespace NoteApp.View
         private Project _project;
 
         /// <summary>
-        /// Показывать все заметки без учета категории.
+        /// Показывает все заметки без учета категории.
         /// </summary>
         private const string _allCategory = "All";
 
         /// <summary>
-        /// Отображает списка заметок.
+        /// Отображает список заметок.
         /// </summary>
         private List<Note> _currentNotes;
 
@@ -97,8 +97,7 @@ namespace NoteApp.View
             Note note = _project.Notes[index];
             index = FindNoteIndex(index);
             var result = MessageBox.Show("Delete Note " + "\"" + CategoryListBox.SelectedItem.ToString()
-                + "\"" + "?", "Successfully Deleted", MessageBoxButtons.OKCancel, MessageBoxIcon.Information,
-                MessageBoxDefaultButton.Button1);
+                + "\"" + "?", "Confirm Deletion", MessageBoxButtons.OKCancel, MessageBoxIcon.Information, MessageBoxDefaultButton.Button1);
             if (result == DialogResult.OK)
             {
                 _project.Notes.RemoveAt(index);
@@ -138,23 +137,11 @@ namespace NoteApp.View
         /// </summary>
         private void ClearSelectedNote()
         {
-            NameLabel.Text = "";
-            NoteTextBox.Text = "";
-            TextLabel.Text = "";
+            NameLabel.Text = "Note Name";
+            NoteTextBox.Text = "Note Text";
+            TextLabel.Text = "Unknown";
             DateTimePickerCreated.Visible = false;
             DateTimePickerModified.Visible = false;
-        }
-
-        private void NotesListBox_SelectedIndexChanged(object sender, EventArgs e)
-        {
-            if (CategoryListBox.SelectedIndex == -1)
-            {
-                ClearSelectedNote();
-            }
-            else
-            {
-                UpdateSelectedNote(CategoryListBox.SelectedIndex);
-            }
         }
 
         /// <summary>
@@ -226,7 +213,7 @@ namespace NoteApp.View
         /// </summary>
         private void ExitToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            this.Close();
+            Close();
         }
 
         /// <summary>
@@ -269,8 +256,8 @@ namespace NoteApp.View
         /// <param name="e"></param>
         private void AboutToolStripMenuItem_Click(object sender, EventArgs e)
         {
-                AboutForm af = new AboutForm();
-                af.Show();
+            AboutForm af = new AboutForm();
+            af.Show();
         }
 
         /// <summary>

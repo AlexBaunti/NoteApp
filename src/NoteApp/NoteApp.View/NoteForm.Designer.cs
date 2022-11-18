@@ -47,7 +47,7 @@ namespace NoteApp.View
             // 
             this.TitleLabel.AutoSize = true;
             this.TitleLabel.Font = new System.Drawing.Font("Cuprum", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.TitleLabel.Location = new System.Drawing.Point(25, 20);
+            this.TitleLabel.Location = new System.Drawing.Point(18, 18);
             this.TitleLabel.Name = "TitleLabel";
             this.TitleLabel.Size = new System.Drawing.Size(44, 22);
             this.TitleLabel.TabIndex = 0;
@@ -57,7 +57,7 @@ namespace NoteApp.View
             // 
             this.CategoryLabel.AutoSize = true;
             this.CategoryLabel.Font = new System.Drawing.Font("Cuprum", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.CategoryLabel.Location = new System.Drawing.Point(25, 50);
+            this.CategoryLabel.Location = new System.Drawing.Point(18, 48);
             this.CategoryLabel.Name = "CategoryLabel";
             this.CategoryLabel.Size = new System.Drawing.Size(79, 22);
             this.CategoryLabel.TabIndex = 0;
@@ -67,7 +67,7 @@ namespace NoteApp.View
             // 
             this.CreatedLabel.AutoSize = true;
             this.CreatedLabel.Font = new System.Drawing.Font("Cuprum", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.CreatedLabel.Location = new System.Drawing.Point(25, 80);
+            this.CreatedLabel.Location = new System.Drawing.Point(18, 78);
             this.CreatedLabel.Name = "CreatedLabel";
             this.CreatedLabel.Size = new System.Drawing.Size(70, 22);
             this.CreatedLabel.TabIndex = 0;
@@ -77,7 +77,7 @@ namespace NoteApp.View
             // 
             this.ModifiedLlabel.AutoSize = true;
             this.ModifiedLlabel.Font = new System.Drawing.Font("Cuprum", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.ModifiedLlabel.Location = new System.Drawing.Point(285, 80);
+            this.ModifiedLlabel.Location = new System.Drawing.Point(278, 78);
             this.ModifiedLlabel.Name = "ModifiedLlabel";
             this.ModifiedLlabel.Size = new System.Drawing.Size(77, 22);
             this.ModifiedLlabel.TabIndex = 0;
@@ -88,7 +88,7 @@ namespace NoteApp.View
             this.DateTimePickerModified.CalendarFont = new System.Drawing.Font("Cuprum", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.DateTimePickerModified.Font = new System.Drawing.Font("Cuprum", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.DateTimePickerModified.Format = System.Windows.Forms.DateTimePickerFormat.Short;
-            this.DateTimePickerModified.Location = new System.Drawing.Point(370, 78);
+            this.DateTimePickerModified.Location = new System.Drawing.Point(363, 76);
             this.DateTimePickerModified.Name = "DateTimePickerModified";
             this.DateTimePickerModified.Size = new System.Drawing.Size(140, 25);
             this.DateTimePickerModified.TabIndex = 1;
@@ -97,7 +97,7 @@ namespace NoteApp.View
             // 
             this.DateTimePickerCreated.Font = new System.Drawing.Font("Cuprum", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.DateTimePickerCreated.Format = System.Windows.Forms.DateTimePickerFormat.Short;
-            this.DateTimePickerCreated.Location = new System.Drawing.Point(120, 78);
+            this.DateTimePickerCreated.Location = new System.Drawing.Point(113, 76);
             this.DateTimePickerCreated.Name = "DateTimePickerCreated";
             this.DateTimePickerCreated.Size = new System.Drawing.Size(140, 25);
             this.DateTimePickerCreated.TabIndex = 1;
@@ -105,11 +105,13 @@ namespace NoteApp.View
             // CategoryComboBox
             // 
             this.CategoryComboBox.Font = new System.Drawing.Font("Cuprum", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.CategoryComboBox.ForeColor = System.Drawing.SystemColors.WindowText;
             this.CategoryComboBox.FormattingEnabled = true;
-            this.CategoryComboBox.Location = new System.Drawing.Point(120, 49);
+            this.CategoryComboBox.Location = new System.Drawing.Point(113, 47);
             this.CategoryComboBox.Name = "CategoryComboBox";
-            this.CategoryComboBox.Size = new System.Drawing.Size(354, 23);
+            this.CategoryComboBox.Size = new System.Drawing.Size(240, 23);
             this.CategoryComboBox.TabIndex = 2;
+            this.CategoryComboBox.Click += new System.EventHandler(this.CategoryComboBox_Click);
             // 
             // NoteTextBox
             // 
@@ -117,18 +119,19 @@ namespace NoteApp.View
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.NoteTextBox.Font = new System.Drawing.Font("Cuprum", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.NoteTextBox.Location = new System.Drawing.Point(12, 115);
+            this.NoteTextBox.Location = new System.Drawing.Point(22, 110);
             this.NoteTextBox.Multiline = true;
             this.NoteTextBox.Name = "NoteTextBox";
-            this.NoteTextBox.Size = new System.Drawing.Size(860, 400);
+            this.NoteTextBox.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
+            this.NoteTextBox.Size = new System.Drawing.Size(840, 400);
             this.NoteTextBox.TabIndex = 3;
             // 
             // TitleTextBox
             // 
             this.TitleTextBox.Font = new System.Drawing.Font("Cuprum", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.TitleTextBox.Location = new System.Drawing.Point(120, 20);
+            this.TitleTextBox.Location = new System.Drawing.Point(113, 18);
             this.TitleTextBox.Name = "TitleTextBox";
-            this.TitleTextBox.Size = new System.Drawing.Size(737, 22);
+            this.TitleTextBox.Size = new System.Drawing.Size(750, 22);
             this.TitleTextBox.TabIndex = 3;
             this.TitleTextBox.TextChanged += new System.EventHandler(this.TitleTextBox_TextChanged);
             // 
@@ -136,9 +139,9 @@ namespace NoteApp.View
             // 
             this.CancelButton.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
             this.CancelButton.Font = new System.Drawing.Font("Cuprum", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.CancelButton.Location = new System.Drawing.Point(600, 525);
+            this.CancelButton.Location = new System.Drawing.Point(593, 521);
             this.CancelButton.Name = "CancelButton";
-            this.CancelButton.Size = new System.Drawing.Size(125, 28);
+            this.CancelButton.Size = new System.Drawing.Size(125, 30);
             this.CancelButton.TabIndex = 4;
             this.CancelButton.Text = "Cancel";
             this.CancelButton.UseVisualStyleBackColor = true;
@@ -148,9 +151,9 @@ namespace NoteApp.View
             // 
             this.SaveButton.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
             this.SaveButton.Font = new System.Drawing.Font("Cuprum", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.SaveButton.Location = new System.Drawing.Point(747, 525);
+            this.SaveButton.Location = new System.Drawing.Point(740, 521);
             this.SaveButton.Name = "SaveButton";
-            this.SaveButton.Size = new System.Drawing.Size(125, 28);
+            this.SaveButton.Size = new System.Drawing.Size(125, 30);
             this.SaveButton.TabIndex = 4;
             this.SaveButton.Text = "Save";
             this.SaveButton.UseVisualStyleBackColor = true;
@@ -191,7 +194,7 @@ namespace NoteApp.View
         private System.Windows.Forms.ComboBox CategoryComboBox;
         private System.Windows.Forms.TextBox NoteTextBox;
         private System.Windows.Forms.TextBox TitleTextBox;
-        private System.Windows.Forms.Button CancelButton;
+        private new System.Windows.Forms.Button CancelButton;
         private System.Windows.Forms.Button SaveButton;
     }
 }
