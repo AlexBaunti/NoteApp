@@ -201,8 +201,6 @@ namespace NoteApp.View
         /// <summary>
         /// Метод обновления.
         /// </summary>
-        /// <param name="sender"></param>
-        /// <param name="e"></param>
         private void CategoryComboBox_SelectedIndexChanged(object sender, EventArgs e)
         {
             ClearSelectedNote();
@@ -213,8 +211,6 @@ namespace NoteApp.View
         /// <summary>
         /// Выход из приложения через меню.
         /// </summary>
-        /// <param name="sender"></param>
-        /// <param name="e"></param>
         private void ExitToolStripMenuItem_Click(object sender, EventArgs e)
         {
             Close();
