@@ -4,7 +4,7 @@ using System.Linq;
 namespace NoteApp.Model
 {
     /// <summary>
-    /// Класс,который хранит все заметки
+    /// Класс,который хранит все заметки.
     /// </summary>
     public class Project
     {

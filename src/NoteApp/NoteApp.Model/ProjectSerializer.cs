@@ -1,11 +1,6 @@
 ﻿using Newtonsoft.Json;
 using System.IO;
 using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using static System.Environment;
 
 namespace NoteApp.Model
 {
@@ -14,11 +9,11 @@ namespace NoteApp.Model
     /// </summary>
     public static class ProjectSerializer
     {
-        private const string _fileName = "NotesApp.notes";
+        private const string _fileName = "NoteApp.note";
 
         private static readonly string _folder = Environment.GetFolderPath(
                 Environment.SpecialFolder.ApplicationData) +
-            "\\Izbyshev_NotesApp\\";
+            "\\Izbyshev_NoteApp\\";
 
         private static readonly string _path = _folder + _fileName;
 
@@ -40,7 +35,7 @@ namespace NoteApp.Model
         }
 
         /// <summary>
-        /// Создает файл
+        /// Создает файл.
         /// </summary>
         /// <param name="folder">File location</param>
         /// <param name="fileName">File name</param>

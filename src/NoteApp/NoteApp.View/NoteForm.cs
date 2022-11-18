@@ -130,15 +130,25 @@ namespace NoteApp.View
             }
         }
 
+        /// <summary>
+        /// Индикация ошибки списка категорий.
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
+        private void CategoryComboBox_Click(object sender, EventArgs e)
+        {
+            CategoryComboBox.BackColor = _correctColor;
+        }
+
+        /// <summary>
+        /// Закрыть форму без сохранения.
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void CancelButton_Click(object sender, EventArgs e)
         {
             DialogResult = DialogResult.Cancel;
             Close();
-        }
-
-        private void CategoryComboBox_Click(object sender, EventArgs e)
-        {
-            CategoryComboBox.BackColor = _correctColor;
         }
 
         private void SaveButton_Click(object sender, EventArgs e)
