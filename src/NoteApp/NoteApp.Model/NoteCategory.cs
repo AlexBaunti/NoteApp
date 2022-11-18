@@ -1,10 +1,11 @@
 ﻿namespace NoteApp.Model
 {
     /// <summary>
-    /// Категория заметки
+    /// Категории заметок
     /// </summary>
     public enum NoteCategory
     {
+        Events,
         Work,
         Food,
         Health,

@@ -32,12 +32,12 @@ namespace NoteApp.View
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(AboutForm));
             this.NoteAppLabel = new System.Windows.Forms.Label();
             this.VersionLabel = new System.Windows.Forms.Label();
-            this.label1 = new System.Windows.Forms.Label();
+            this.AuthorLabel = new System.Windows.Forms.Label();
             this.CcLabel = new System.Windows.Forms.Label();
-            this.label2 = new System.Windows.Forms.Label();
-            this.label3 = new System.Windows.Forms.Label();
-            this.linkLabel1 = new System.Windows.Forms.LinkLabel();
-            this.linkLabel2 = new System.Windows.Forms.LinkLabel();
+            this.EmailLabel = new System.Windows.Forms.Label();
+            this.GitLabel = new System.Windows.Forms.Label();
+            this.EmailLinkLabel = new System.Windows.Forms.LinkLabel();
+            this.GitLinkLabel = new System.Windows.Forms.LinkLabel();
             this.SuspendLayout();
             // 
             // NoteAppLabel
@@ -60,15 +60,15 @@ namespace NoteApp.View
             this.VersionLabel.TabIndex = 0;
             this.VersionLabel.Text = "v. 1.0.0";
             // 
-            // label1
+            // AuthorLabel
             // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Cuprum", 14F);
-            this.label1.Location = new System.Drawing.Point(19, 80);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(163, 22);
-            this.label1.TabIndex = 0;
-            this.label1.Text = "Author: Alex Izbyshev";
+            this.AuthorLabel.AutoSize = true;
+            this.AuthorLabel.Font = new System.Drawing.Font("Cuprum", 14F);
+            this.AuthorLabel.Location = new System.Drawing.Point(19, 80);
+            this.AuthorLabel.Name = "AuthorLabel";
+            this.AuthorLabel.Size = new System.Drawing.Size(163, 22);
+            this.AuthorLabel.TabIndex = 0;
+            this.AuthorLabel.Text = "Author: Alex Izbyshev";
             // 
             // CcLabel
             // 
@@ -80,59 +80,59 @@ namespace NoteApp.View
             this.CcLabel.TabIndex = 0;
             this.CcLabel.Text = "2022 Alex Izbyshev ©";
             // 
-            // label2
+            // EmailLabel
             // 
-            this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Cuprum", 12F);
-            this.label2.Location = new System.Drawing.Point(20, 125);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(129, 17);
-            this.label2.TabIndex = 0;
-            this.label2.Text = "E-mail for Feedback:";
+            this.EmailLabel.AutoSize = true;
+            this.EmailLabel.Font = new System.Drawing.Font("Cuprum", 12F);
+            this.EmailLabel.Location = new System.Drawing.Point(20, 125);
+            this.EmailLabel.Name = "EmailLabel";
+            this.EmailLabel.Size = new System.Drawing.Size(129, 17);
+            this.EmailLabel.TabIndex = 0;
+            this.EmailLabel.Text = "E-mail for Feedback:";
             // 
-            // label3
+            // GitLabel
             // 
-            this.label3.AutoSize = true;
-            this.label3.Font = new System.Drawing.Font("Cuprum", 12F);
-            this.label3.Location = new System.Drawing.Point(20, 150);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(49, 17);
-            this.label3.TabIndex = 0;
-            this.label3.Text = "GitHub:";
+            this.GitLabel.AutoSize = true;
+            this.GitLabel.Font = new System.Drawing.Font("Cuprum", 12F);
+            this.GitLabel.Location = new System.Drawing.Point(20, 150);
+            this.GitLabel.Name = "GitLabel";
+            this.GitLabel.Size = new System.Drawing.Size(49, 17);
+            this.GitLabel.TabIndex = 0;
+            this.GitLabel.Text = "GitHub:";
             // 
-            // linkLabel1
+            // EmailLinkLabel
             // 
-            this.linkLabel1.AutoSize = true;
-            this.linkLabel1.Font = new System.Drawing.Font("Cuprum", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.linkLabel1.Location = new System.Drawing.Point(155, 125);
-            this.linkLabel1.Name = "linkLabel1";
-            this.linkLabel1.Size = new System.Drawing.Size(115, 17);
-            this.linkLabel1.TabIndex = 1;
-            this.linkLabel1.TabStop = true;
-            this.linkLabel1.Text = "aizbyshev@mail.ru";
+            this.EmailLinkLabel.AutoSize = true;
+            this.EmailLinkLabel.Font = new System.Drawing.Font("Cuprum", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.EmailLinkLabel.Location = new System.Drawing.Point(155, 125);
+            this.EmailLinkLabel.Name = "EmailLinkLabel";
+            this.EmailLinkLabel.Size = new System.Drawing.Size(115, 17);
+            this.EmailLinkLabel.TabIndex = 1;
+            this.EmailLinkLabel.TabStop = true;
+            this.EmailLinkLabel.Text = "aizbyshev@mail.ru";
             // 
-            // linkLabel2
+            // GitLinkLabel
             // 
-            this.linkLabel2.AutoSize = true;
-            this.linkLabel2.Font = new System.Drawing.Font("Cuprum", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.linkLabel2.Location = new System.Drawing.Point(75, 150);
-            this.linkLabel2.Name = "linkLabel2";
-            this.linkLabel2.Size = new System.Drawing.Size(193, 17);
-            this.linkLabel2.TabIndex = 1;
-            this.linkLabel2.TabStop = true;
-            this.linkLabel2.Text = "github.com/AlexBaunti/NoteApp";
+            this.GitLinkLabel.AutoSize = true;
+            this.GitLinkLabel.Font = new System.Drawing.Font("Cuprum", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.GitLinkLabel.Location = new System.Drawing.Point(75, 150);
+            this.GitLinkLabel.Name = "GitLinkLabel";
+            this.GitLinkLabel.Size = new System.Drawing.Size(193, 17);
+            this.GitLinkLabel.TabIndex = 1;
+            this.GitLinkLabel.TabStop = true;
+            this.GitLinkLabel.Text = "github.com/AlexBaunti/NoteApp";
             // 
             // AboutForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(404, 231);
-            this.Controls.Add(this.linkLabel2);
-            this.Controls.Add(this.linkLabel1);
-            this.Controls.Add(this.label3);
-            this.Controls.Add(this.label2);
+            this.Controls.Add(this.GitLinkLabel);
+            this.Controls.Add(this.EmailLinkLabel);
+            this.Controls.Add(this.GitLabel);
+            this.Controls.Add(this.EmailLabel);
             this.Controls.Add(this.CcLabel);
-            this.Controls.Add(this.label1);
+            this.Controls.Add(this.AuthorLabel);
             this.Controls.Add(this.VersionLabel);
             this.Controls.Add(this.NoteAppLabel);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
@@ -150,11 +150,11 @@ namespace NoteApp.View
 
         private System.Windows.Forms.Label NoteAppLabel;
         private System.Windows.Forms.Label VersionLabel;
-        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Label AuthorLabel;
         private System.Windows.Forms.Label CcLabel;
-        private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.LinkLabel linkLabel1;
-        private System.Windows.Forms.LinkLabel linkLabel2;
+        private System.Windows.Forms.Label EmailLabel;
+        private System.Windows.Forms.Label GitLabel;
+        private System.Windows.Forms.LinkLabel EmailLinkLabel;
+        private System.Windows.Forms.LinkLabel GitLinkLabel;
     }
 }

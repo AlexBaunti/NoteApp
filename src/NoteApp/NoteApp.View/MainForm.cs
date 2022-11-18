@@ -13,12 +13,12 @@ namespace NoteApp.View
         private Project _project;
 
         /// <summary>
-        /// Показывать все заметки без учета категории.
+        /// Показывает все заметки без учета категории.
         /// </summary>
         private const string _allCategory = "All";
 
         /// <summary>
-        /// Отображает списка заметок.
+        /// Отображает список заметок.
         /// </summary>
         private List<Note> _currentNotes;
 
@@ -137,9 +137,9 @@ namespace NoteApp.View
         /// </summary>
         private void ClearSelectedNote()
         {
-            NameLabel.Text = "";
-            NoteTextBox.Text = "";
-            TextLabel.Text = "";
+            NameLabel.Text = "Note Name";
+            NoteTextBox.Text = "Note Text";
+            TextLabel.Text = "Unknown";
             DateTimePickerCreated.Visible = false;
             DateTimePickerModified.Visible = false;
         }
@@ -213,7 +213,7 @@ namespace NoteApp.View
         /// </summary>
         private void ExitToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            this.Close();
+            Close();
         }
 
         /// <summary>
@@ -256,8 +256,8 @@ namespace NoteApp.View
         /// <param name="e"></param>
         private void AboutToolStripMenuItem_Click(object sender, EventArgs e)
         {
-                AboutForm af = new AboutForm();
-                af.Show();
+            AboutForm af = new AboutForm();
+            af.Show();
         }
 
         /// <summary>

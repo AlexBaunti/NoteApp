@@ -66,11 +66,13 @@ namespace NoteApp.View
             this.NoteTextBox.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
+            this.NoteTextBox.BackColor = System.Drawing.SystemColors.Window;
             this.NoteTextBox.Font = new System.Drawing.Font("Cuprum", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.NoteTextBox.Location = new System.Drawing.Point(30, 110);
             this.NoteTextBox.Margin = new System.Windows.Forms.Padding(8);
             this.NoteTextBox.Multiline = true;
             this.NoteTextBox.Name = "NoteTextBox";
+            this.NoteTextBox.ReadOnly = true;
             this.NoteTextBox.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
             this.NoteTextBox.Size = new System.Drawing.Size(520, 400);
             this.NoteTextBox.TabIndex = 0;
@@ -82,9 +84,9 @@ namespace NoteApp.View
             this.NameLabel.ForeColor = System.Drawing.SystemColors.ControlText;
             this.NameLabel.Location = new System.Drawing.Point(25, 5);
             this.NameLabel.Name = "NameLabel";
-            this.NameLabel.Size = new System.Drawing.Size(358, 37);
+            this.NameLabel.Size = new System.Drawing.Size(149, 37);
             this.NameLabel.TabIndex = 1;
-            this.NameLabel.Text = "Требования к оформлению";
+            this.NameLabel.Text = "Note Name";
             // 
             // CategoryLabel
             // 
@@ -102,9 +104,9 @@ namespace NoteApp.View
             this.TextLabel.Font = new System.Drawing.Font("Cuprum", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.TextLabel.Location = new System.Drawing.Point(110, 50);
             this.TextLabel.Name = "TextLabel";
-            this.TextLabel.Size = new System.Drawing.Size(48, 22);
+            this.TextLabel.Size = new System.Drawing.Size(76, 22);
             this.TextLabel.TabIndex = 1;
-            this.TextLabel.Text = "Work";
+            this.TextLabel.Text = "Unknown";
             // 
             // CreatedLabel
             // 
@@ -134,7 +136,7 @@ namespace NoteApp.View
             this.DateTimePickerModified.Location = new System.Drawing.Point(323, 80);
             this.DateTimePickerModified.Name = "DateTimePickerModified";
             this.DateTimePickerModified.Size = new System.Drawing.Size(100, 24);
-            this.DateTimePickerModified.TabIndex = 2;
+            this.DateTimePickerModified.TabIndex = 3;
             // 
             // DateTimePickerCreated
             // 

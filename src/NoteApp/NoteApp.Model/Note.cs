@@ -13,9 +13,9 @@ namespace NoteApp.Model
         private const int NOTETITLELIMIT = 50;
 
         /// <summary>
-        /// Название по умолчанию.
+        /// Ограничение длины названия.
         /// </summary>
-        private const string DEFAULTTITLE = "Без Названия";
+        private const string DEFAULTTITLE = "Unnamed Note";
 
         /// <summary>
         /// Название заметки.
@@ -47,22 +47,19 @@ namespace NoteApp.Model
         /// </summary>
         public string Title
         {
-            get { return _title; }
-
             set
             {
                 if (value.Length > NOTETITLELIMIT)
                 {
-                    throw new ArgumentException("Max Title Length = 50");
+                    throw new ArgumentOutOfRangeException("Max Title Length = 50");
                 }
-                if (value == string.Empty)
+                if(value.Length == 0)
                 {
-                    _title = DEFAULTTITLE;
+                    value = DEFAULTTITLE;
                 }
-
                 _title = value;
-                _modifiedTime = DateTime.Now;
             }
+            get => _title;
         }
 
         /// <summary>
@@ -70,50 +67,35 @@ namespace NoteApp.Model
         /// </summary>
         public string Text
         {
-            get { return _text; }
             set
             {
                 _text = value;
                 _modifiedTime = DateTime.Now;
             }
+            get => _text;
         }
 
         /// <summary>
         /// Возвращает дату создания заметки
         /// </summary>
-        public DateTime CreateTime
-        {
-            get
-            {
-                return _creationDate;
-            }
-        }
+        public DateTime CreateTime => _creationDate;
 
         /// <summary>
         /// Возвращает дату изменения заметки
         /// </summary>
-        public DateTime ModifiedTime
-        {
-            get
-            {
-                return _modifiedTime;
-            }
-        }
+        public DateTime ModifiedTime => _modifiedTime;
 
         /// <summary>
 		/// Задает и возвращает категорию заметки.
 		/// </summary>
 		public NoteCategory Category
         {
-            get
-            {
-                return _category;
-            }
             set
             {
                 _category = value;
                 _modifiedTime = DateTime.Now;
             }
+            get => _category;
         }
 
         /// <param name="name"></param>
@@ -145,7 +127,7 @@ namespace NoteApp.Model
         /// </summary>
         public object Clone()
         {
-            return new Note(this.Title, this.Category, this.Text);
+            return new Note(Title, Category, Text);
         }
     }
 }
