@@ -111,6 +111,9 @@ namespace NoteApp.Model
         /// <summary>
         /// Создает экземпляр заметки.
         /// </summary>
+        /// <param name="name"></param>
+        /// <param name="category"></param>
+        /// <param name="text"></param>
         public Note(string name, NoteCategory category, string text)
         {
             Title = name;
