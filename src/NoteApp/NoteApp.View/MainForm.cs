@@ -28,10 +28,6 @@ namespace NoteApp.View
             _project = new Project();
             _project = ProjectSerializer.LoadFromFile();
             _currentNotes = _project.Notes;
-            foreach(var value in Enum.GetValues(typeof(NoteCategory)))
-                {
-                    CategoryComboBox.Items.Add(value.ToString());
-                }
             CategoryComboBox.SelectedIndex = 0;
             ClearSelectedNote();
             UpdateListBox();

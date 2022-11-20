@@ -68,13 +68,13 @@ namespace NoteApp.View
             | System.Windows.Forms.AnchorStyles.Right)));
             this.NoteTextBox.BackColor = System.Drawing.SystemColors.Window;
             this.NoteTextBox.Font = new System.Drawing.Font("Cuprum", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.NoteTextBox.Location = new System.Drawing.Point(30, 110);
+            this.NoteTextBox.Location = new System.Drawing.Point(15, 110);
             this.NoteTextBox.Margin = new System.Windows.Forms.Padding(8);
             this.NoteTextBox.Multiline = true;
             this.NoteTextBox.Name = "NoteTextBox";
             this.NoteTextBox.ReadOnly = true;
             this.NoteTextBox.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
-            this.NoteTextBox.Size = new System.Drawing.Size(520, 400);
+            this.NoteTextBox.Size = new System.Drawing.Size(542, 400);
             this.NoteTextBox.TabIndex = 0;
             // 
             // NameLabel
@@ -82,7 +82,7 @@ namespace NoteApp.View
             this.NameLabel.AutoSize = true;
             this.NameLabel.Font = new System.Drawing.Font("Cuprum", 24F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.NameLabel.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.NameLabel.Location = new System.Drawing.Point(25, 5);
+            this.NameLabel.Location = new System.Drawing.Point(10, 5);
             this.NameLabel.Name = "NameLabel";
             this.NameLabel.Size = new System.Drawing.Size(149, 37);
             this.NameLabel.TabIndex = 1;
@@ -92,7 +92,7 @@ namespace NoteApp.View
             // 
             this.CategoryLabel.AutoSize = true;
             this.CategoryLabel.Font = new System.Drawing.Font("Cuprum", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.CategoryLabel.Location = new System.Drawing.Point(30, 50);
+            this.CategoryLabel.Location = new System.Drawing.Point(15, 50);
             this.CategoryLabel.Name = "CategoryLabel";
             this.CategoryLabel.Size = new System.Drawing.Size(79, 22);
             this.CategoryLabel.TabIndex = 1;
@@ -102,7 +102,7 @@ namespace NoteApp.View
             // 
             this.TextLabel.AutoSize = true;
             this.TextLabel.Font = new System.Drawing.Font("Cuprum", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.TextLabel.Location = new System.Drawing.Point(110, 50);
+            this.TextLabel.Location = new System.Drawing.Point(95, 50);
             this.TextLabel.Name = "TextLabel";
             this.TextLabel.Size = new System.Drawing.Size(76, 22);
             this.TextLabel.TabIndex = 1;
@@ -112,7 +112,7 @@ namespace NoteApp.View
             // 
             this.CreatedLabel.AutoSize = true;
             this.CreatedLabel.Font = new System.Drawing.Font("Cuprum", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.CreatedLabel.Location = new System.Drawing.Point(30, 80);
+            this.CreatedLabel.Location = new System.Drawing.Point(15, 80);
             this.CreatedLabel.Name = "CreatedLabel";
             this.CreatedLabel.Size = new System.Drawing.Size(70, 22);
             this.CreatedLabel.TabIndex = 1;
@@ -122,7 +122,7 @@ namespace NoteApp.View
             // 
             this.ModifiedLabel.AutoSize = true;
             this.ModifiedLabel.Font = new System.Drawing.Font("Cuprum", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.ModifiedLabel.Location = new System.Drawing.Point(240, 80);
+            this.ModifiedLabel.Location = new System.Drawing.Point(225, 80);
             this.ModifiedLabel.Name = "ModifiedLabel";
             this.ModifiedLabel.Size = new System.Drawing.Size(77, 22);
             this.ModifiedLabel.TabIndex = 1;
@@ -133,7 +133,7 @@ namespace NoteApp.View
             this.DateTimePickerModified.Enabled = false;
             this.DateTimePickerModified.Font = new System.Drawing.Font("Cuprum", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.DateTimePickerModified.Format = System.Windows.Forms.DateTimePickerFormat.Short;
-            this.DateTimePickerModified.Location = new System.Drawing.Point(323, 80);
+            this.DateTimePickerModified.Location = new System.Drawing.Point(308, 80);
             this.DateTimePickerModified.Name = "DateTimePickerModified";
             this.DateTimePickerModified.Size = new System.Drawing.Size(100, 24);
             this.DateTimePickerModified.TabIndex = 3;
@@ -143,7 +143,7 @@ namespace NoteApp.View
             this.DateTimePickerCreated.Enabled = false;
             this.DateTimePickerCreated.Font = new System.Drawing.Font("Cuprum", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.DateTimePickerCreated.Format = System.Windows.Forms.DateTimePickerFormat.Short;
-            this.DateTimePickerCreated.Location = new System.Drawing.Point(108, 80);
+            this.DateTimePickerCreated.Location = new System.Drawing.Point(93, 80);
             this.DateTimePickerCreated.Name = "DateTimePickerCreated";
             this.DateTimePickerCreated.Size = new System.Drawing.Size(100, 24);
             this.DateTimePickerCreated.TabIndex = 2;
@@ -243,6 +243,16 @@ namespace NoteApp.View
             | System.Windows.Forms.AnchorStyles.Right)));
             this.CategoryComboBox.Font = new System.Drawing.Font("Cuprum", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.CategoryComboBox.FormattingEnabled = true;
+            this.CategoryComboBox.Items.AddRange(new object[] {
+            "All",
+            "Events",
+            "Work",
+            "Food",
+            "Health",
+            "Animals",
+            "Books",
+            "Traveling",
+            "Other"});
             this.CategoryComboBox.Location = new System.Drawing.Point(140, 15);
             this.CategoryComboBox.Name = "CategoryComboBox";
             this.CategoryComboBox.Size = new System.Drawing.Size(128, 23);
