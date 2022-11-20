@@ -57,6 +57,7 @@ namespace NoteApp.View
         {
             if (index == -1)
             {
+                MessageBox.Show("No Notes Selected","Edit Note");
                 return;
             }
             int currentIndex = index;
@@ -87,6 +88,7 @@ namespace NoteApp.View
         {
             if (index == -1)
             {
+                MessageBox.Show("No Notes Selected", "Remove Note");
                 return;
             }
             int currentIndex = index;

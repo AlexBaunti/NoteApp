@@ -147,8 +147,15 @@ namespace NoteApp.View
         /// <param name="e"></param>
         private void CancelButton_Click(object sender, EventArgs e)
         {
-            DialogResult = DialogResult.Cancel;
-            Close();
+            DialogResult dialogResult = MessageBox.Show("Continue without Saving?","Exit", MessageBoxButtons.YesNo);
+            if (dialogResult == DialogResult.Yes)
+            {
+                Close();
+            }
+            else if (dialogResult == DialogResult.No)
+            {
+                return;
+            }
         }
 
         private void SaveButton_Click(object sender, EventArgs e)
@@ -156,7 +163,7 @@ namespace NoteApp.View
             if (CategoryComboBox.SelectedIndex == -1)
             {
                 CategoryComboBox.BackColor = _errorColor;
-                MessageBox.Show("Выберите категорию");
+                MessageBox.Show("Choose Category");
                 return;
             }
 
