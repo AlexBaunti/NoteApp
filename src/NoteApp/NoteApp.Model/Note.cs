@@ -13,11 +13,6 @@ namespace NoteApp.Model
         private const int NOTETITLELIMIT = 50;
 
         /// <summary>
-        /// Ограничение длины названия.
-        /// </summary>
-        private const string DEFAULTTITLE = "Unnamed Note";
-
-        /// <summary>
         /// Название заметки.
         /// </summary>
         private string _title;
@@ -51,11 +46,11 @@ namespace NoteApp.Model
             {
                 if (value.Length > NOTETITLELIMIT)
                 {
-                    throw new ArgumentOutOfRangeException("Max Title Length = 50");
+                    throw new ArgumentOutOfRangeException("Max Title Length 50 Symbols");
                 }
                 if(value.Length == 0)
                 {
-                    value = DEFAULTTITLE;
+                    throw new ArgumentOutOfRangeException("Title Must Be Filled");
                 }
                 _title = value;
             }
