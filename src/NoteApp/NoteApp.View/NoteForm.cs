@@ -163,7 +163,7 @@ namespace NoteApp.View
             if (CategoryComboBox.SelectedIndex == -1)
             {
                 CategoryComboBox.BackColor = _errorColor;
-                MessageBox.Show("Choose Category");
+                MessageBox.Show("Choose Category from List");
                 return;
             }
 
