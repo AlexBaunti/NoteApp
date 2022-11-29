@@ -4,7 +4,7 @@ using System.Windows.Forms;
 using NoteApp.Model;
 
 namespace NoteApp.View
-{
+{// TODO: xml
     public partial class NoteForm : Form
     {
         /// <summary>
@@ -37,6 +37,7 @@ namespace NoteApp.View
             InitializeComponent();
             foreach (var value in Enum.GetValues(typeof(NoteCategory)))
             {
+                // TODO: не надо делать ToString()
                 CategoryComboBox.Items.Add(value.ToString());
             }
             TitleTextBox.Text = "Unnamed Note";
@@ -71,6 +72,7 @@ namespace NoteApp.View
         /// </summary>
         private void UpdateForm()
         {
+            // TODO: GetValue
             CategoryComboBox.SelectedItem = Enum.GetName(typeof(NoteCategory), _noteCopy.Category);
             TitleTextBox.Text = _noteCopy.Title;
             DateTimePickerCreated.Value = _noteCopy.CreateTime;
@@ -85,6 +87,7 @@ namespace NoteApp.View
         {
             foreach (var category in Enum.GetValues(typeof(NoteCategory)))
             {
+                // TODO: Не надо делать ToString()
                 if (CategoryComboBox.SelectedItem.ToString() == category.ToString())
                 {
                     _noteCopy.Category = (NoteCategory)category;
@@ -147,6 +150,7 @@ namespace NoteApp.View
         /// <param name="e"></param>
         private void CancelButton_Click(object sender, EventArgs e)
         {
+            // TODO: Saving - это про сохранение (например, в файл). А то, что у тебя, сопровождается надписью "Все изменения будут потеряны. Продолжить?"
             DialogResult dialogResult = MessageBox.Show("Continue without Saving?","Exit", MessageBoxButtons.YesNo);
             if (dialogResult == DialogResult.Yes)
             {

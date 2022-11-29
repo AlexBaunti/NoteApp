@@ -8,7 +8,7 @@ namespace NoteApp.Model
     /// Класс, реализующий сохранение и загрузку
     /// </summary>
     public static class ProjectSerializer
-    {
+    {// TODO: xml
         private const string _fileName = "NoteApp.note";
 
         private static readonly string _folder = Environment.GetFolderPath(
@@ -16,7 +16,7 @@ namespace NoteApp.Model
             "\\Izbyshev_NoteApp\\";
 
         private static readonly string _path = _folder + _fileName;
-
+        // TODO: почему Default, если его снаружи можно менять?
         public static string DefaultPath { get; set; } = _path;
 
         public static void SaveToFile(Project data)
