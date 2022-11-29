@@ -257,7 +257,7 @@ namespace NoteApp.View
         /// <param name="sender"></param>
         /// <param name="e"></param>
         private void AboutToolStripMenuItem_Click(object sender, EventArgs e)
-        {
+        {// TODO: никаких сокращений в коде
             AboutForm af = new AboutForm();
             af.Show();
         }
@@ -284,6 +284,7 @@ namespace NoteApp.View
             UpdateListBox();
         }
 
+        // TODO: никаких сокращений в названиях элементов и обработчиков. Переименовать элементы и их обработчики
         /// <summary>
         /// Удаление заметки через кнопку.
         /// </summary>

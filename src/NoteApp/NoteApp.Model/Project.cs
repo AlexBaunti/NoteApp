@@ -7,11 +7,11 @@ namespace NoteApp.Model
     /// Класс,который хранит все заметки.
     /// </summary>
     public class Project
-    {
+    {// TODO: xml
         public Project()
         {
             Notes = new List<Note>();
-        }
+        } // TODO: пустые строки
         /// <summary>
         /// Список с заметками.
         /// </summary>

@@ -42,6 +42,7 @@ namespace NoteApp.Model
         /// </summary>
         public string Title
         {
+            //TODO: сначала get, потом set. Исправить везде
             set
             {
                 if (value.Length > NOTETITLELIMIT)
@@ -73,6 +74,7 @@ namespace NoteApp.Model
         /// <summary>
         /// Возвращает дату создания заметки
         /// </summary>
+        // TODO: поле и свойство должны называться одинаково, только свойство без подчеркивания и с заглавной буквы.
         public DateTime CreateTime => _creationDate;
 
         /// <summary>
@@ -93,6 +95,7 @@ namespace NoteApp.Model
             get => _category;
         }
 
+        // TODO: xml-комментарий не полный.
         /// <param name="name"></param>
         /// <param name="category"></param>
         /// <param name="text"></param>
@@ -116,6 +119,7 @@ namespace NoteApp.Model
             Text = text;
         }
 
+        // TODO: тебе точно нужно три конструктора?
         public Note()
         {
         }
