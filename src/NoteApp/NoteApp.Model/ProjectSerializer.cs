@@ -5,40 +5,37 @@ using System;
 namespace NoteApp.Model
 {
     /// <summary>
-    /// Класс, реализующий сохранение и загрузку
+    /// Класс, реализующий сохранение и загрузку.
     /// </summary>
     public static class ProjectSerializer
-    {// TODO: xml
+    {
+        /// <summary>
+        /// Название файла сохранения.
+        /// </summary>
         private const string _fileName = "NoteApp.note";
 
+        /// <summary>
+        /// Путь к папке сохранения.
+        /// </summary>
         private static readonly string _folder = Environment.GetFolderPath(
                 Environment.SpecialFolder.ApplicationData) +
             "\\Izbyshev_NoteApp\\";
 
+        /// <summary>
+        /// Полный путь директории сохранения.
+        /// </summary>
         private static readonly string _path = _folder + _fileName;
-        // TODO: почему Default, если его снаружи можно менять?
-        public static string DefaultPath { get; set; } = _path;
 
-        public static void SaveToFile(Project data)
-        {
-            if (!File.Exists(DefaultPath))
-            {
-                CreatePath(_folder, _fileName);
-            }
-            var serializer = new JsonSerializer();
-            serializer.Formatting = Formatting.Indented;
-            using (var sw = new StreamWriter(DefaultPath))
-            using (JsonWriter writer = new JsonTextWriter(sw))
-            {
-                serializer.Serialize(writer, data);
-            }
-        }
+        /// <summary>
+        /// Путь сохранения.
+        /// </summary>
+        public static string SavePath { get; set; } = _path;
 
         /// <summary>
         /// Создает файл.
         /// </summary>
-        /// <param name="folder">File location</param>
-        /// <param name="fileName">File name</param>
+        /// <param name="folder">Папка сохранения</param>
+        /// <param name="fileName">Имя файла</param>
         public static void CreatePath(string folder, string fileName)
         {
             if (folder == null)
@@ -57,21 +54,40 @@ namespace NoteApp.Model
             {
                 File.Create(folder + fileName).Close();
             }
-            DefaultPath = folder + fileName;
+            SavePath = folder + fileName;
+        }
+
+        /// <summary>
+        /// Сохраненяет в файл.
+        /// </summary>
+        /// <param name="data">Данные проекта</param>
+        public static void SaveToFile(Project data)
+        {
+            if (!File.Exists(SavePath))
+            {
+                CreatePath(_folder, _fileName);
+            }
+            var serializer = new JsonSerializer();
+            serializer.Formatting = Formatting.Indented;
+            using (var sw = new StreamWriter(SavePath))
+            using (JsonWriter writer = new JsonTextWriter(sw))
+            {
+                serializer.Serialize(writer, data);
+            }
         }
 
         /// <summary>
         /// Загрузка проекта из файла.
         /// </summary>
         /// <returns>
-        /// Возвращает загруженный проект из файла
+        /// Возвращает загруженный проект из файла.
         /// </returns>
         public static Project LoadFromFile()
         {
             var serializer = new JsonSerializer();
             try
             {
-                using (var sr = new StreamReader(DefaultPath))
+                using (var sr = new StreamReader(SavePath))
                 using (JsonReader reader = new JsonTextReader(sr))
                 {
                     var project = (Project)serializer.Deserialize<Project>(reader);

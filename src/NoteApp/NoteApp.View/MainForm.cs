@@ -5,6 +5,9 @@ using NoteApp.Model;
 
 namespace NoteApp.View
 {
+    /// <summary>
+    /// Класс главной формы.
+    /// </summary>
     public partial class MainForm : Form
     {
         /// <summary>
@@ -126,7 +129,7 @@ namespace NoteApp.View
             NameLabel.Text = note.Title;
             DateTimePickerCreated.Visible = true;
             DateTimePickerModified.Visible = true;
-            DateTimePickerCreated.Value = note.CreateTime;
+            DateTimePickerCreated.Value = note.CreationDateTime;
             DateTimePickerModified.Value = note.ModifiedTime;
         }
 
@@ -215,6 +218,7 @@ namespace NoteApp.View
         /// <param name="e"></param>
         private void ExitToolStripMenuItem_Click(object sender, EventArgs e)
         {
+            ProjectSerializer.SaveToFile(_project);
             Close();
         }
 
@@ -257,9 +261,9 @@ namespace NoteApp.View
         /// <param name="sender"></param>
         /// <param name="e"></param>
         private void AboutToolStripMenuItem_Click(object sender, EventArgs e)
-        {// TODO: никаких сокращений в коде
-            AboutForm af = new AboutForm();
-            af.Show();
+        {
+            AboutForm aboutForm = new AboutForm();
+            aboutForm.Show();
         }
 
         /// <summary>
@@ -284,13 +288,12 @@ namespace NoteApp.View
             UpdateListBox();
         }
 
-        // TODO: никаких сокращений в названиях элементов и обработчиков. Переименовать элементы и их обработчики
         /// <summary>
         /// Удаление заметки через кнопку.
         /// </summary>
         /// <param name="sender"></param>
         /// <param name="e"></param>
-        private void IconButtonDel_Click(object sender, EventArgs e)
+        private void IconButtonDelete_Click(object sender, EventArgs e)
         {
             RemoveNote(CategoryListBox.SelectedIndex);
             UpdateListBox();

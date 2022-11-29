@@ -40,7 +40,7 @@ namespace NoteApp.View
             this.DateTimePickerCreated = new System.Windows.Forms.DateTimePicker();
             this.SplitContainer = new System.Windows.Forms.SplitContainer();
             this.IconButtonEdit = new System.Windows.Forms.Button();
-            this.IconButtonDel = new System.Windows.Forms.Button();
+            this.IconButtonDelete = new System.Windows.Forms.Button();
             this.IconButtonAdd = new System.Windows.Forms.Button();
             this.CategoryListBox = new System.Windows.Forms.ListBox();
             this.CategoryComboBox = new System.Windows.Forms.ComboBox();
@@ -160,7 +160,7 @@ namespace NoteApp.View
             // SplitContainer.Panel1
             // 
             this.SplitContainer.Panel1.Controls.Add(this.IconButtonEdit);
-            this.SplitContainer.Panel1.Controls.Add(this.IconButtonDel);
+            this.SplitContainer.Panel1.Controls.Add(this.IconButtonDelete);
             this.SplitContainer.Panel1.Controls.Add(this.IconButtonAdd);
             this.SplitContainer.Panel1.Controls.Add(this.CategoryListBox);
             this.SplitContainer.Panel1.Controls.Add(this.CategoryComboBox);
@@ -194,19 +194,19 @@ namespace NoteApp.View
             this.IconButtonEdit.UseVisualStyleBackColor = true;
             this.IconButtonEdit.Click += new System.EventHandler(this.IconButtonEdit_Click);
             // 
-            // IconButtonDel
+            // IconButtonDelete
             // 
-            this.IconButtonDel.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
-            this.IconButtonDel.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("IconButtonDel.BackgroundImage")));
-            this.IconButtonDel.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.IconButtonDel.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.IconButtonDel.ForeColor = System.Drawing.SystemColors.Control;
-            this.IconButtonDel.Location = new System.Drawing.Point(142, 460);
-            this.IconButtonDel.Name = "IconButtonDel";
-            this.IconButtonDel.Size = new System.Drawing.Size(48, 48);
-            this.IconButtonDel.TabIndex = 4;
-            this.IconButtonDel.UseVisualStyleBackColor = true;
-            this.IconButtonDel.Click += new System.EventHandler(this.IconButtonDel_Click);
+            this.IconButtonDelete.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
+            this.IconButtonDelete.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("IconButtonDelete.BackgroundImage")));
+            this.IconButtonDelete.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.IconButtonDelete.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.IconButtonDelete.ForeColor = System.Drawing.SystemColors.Control;
+            this.IconButtonDelete.Location = new System.Drawing.Point(142, 460);
+            this.IconButtonDelete.Name = "IconButtonDelete";
+            this.IconButtonDelete.Size = new System.Drawing.Size(48, 48);
+            this.IconButtonDelete.TabIndex = 4;
+            this.IconButtonDelete.UseVisualStyleBackColor = true;
+            this.IconButtonDelete.Click += new System.EventHandler(this.IconButtonDelete_Click);
             // 
             // IconButtonAdd
             // 
@@ -393,7 +393,7 @@ namespace NoteApp.View
         private System.Windows.Forms.ToolStripMenuItem AboutToolStripMenuItem;
         private System.Windows.Forms.MenuStrip MenuStrip;
         private System.Windows.Forms.Button IconButtonEdit;
-        private System.Windows.Forms.Button IconButtonDel;
+        private System.Windows.Forms.Button IconButtonDelete;
         private System.Windows.Forms.Button IconButtonAdd;
     }
 }

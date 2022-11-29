@@ -40,7 +40,7 @@ namespace NoteApp.View
             this.NoteTextBox = new System.Windows.Forms.TextBox();
             this.TitleTextBox = new System.Windows.Forms.TextBox();
             this.CancelButton = new System.Windows.Forms.Button();
-            this.SaveButton = new System.Windows.Forms.Button();
+            this.OkButton = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // TitleLabel
@@ -139,7 +139,7 @@ namespace NoteApp.View
             // 
             this.CancelButton.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
             this.CancelButton.Font = new System.Drawing.Font("Cuprum", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.CancelButton.Location = new System.Drawing.Point(593, 521);
+            this.CancelButton.Location = new System.Drawing.Point(740, 520);
             this.CancelButton.Name = "CancelButton";
             this.CancelButton.Size = new System.Drawing.Size(125, 30);
             this.CancelButton.TabIndex = 4;
@@ -147,24 +147,24 @@ namespace NoteApp.View
             this.CancelButton.UseVisualStyleBackColor = true;
             this.CancelButton.Click += new System.EventHandler(this.CancelButton_Click);
             // 
-            // SaveButton
+            // OkButton
             // 
-            this.SaveButton.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
-            this.SaveButton.Font = new System.Drawing.Font("Cuprum", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.SaveButton.Location = new System.Drawing.Point(740, 521);
-            this.SaveButton.Name = "SaveButton";
-            this.SaveButton.Size = new System.Drawing.Size(125, 30);
-            this.SaveButton.TabIndex = 4;
-            this.SaveButton.Text = "Save";
-            this.SaveButton.UseVisualStyleBackColor = true;
-            this.SaveButton.Click += new System.EventHandler(this.SaveButton_Click);
+            this.OkButton.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+            this.OkButton.Font = new System.Drawing.Font("Cuprum", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.OkButton.Location = new System.Drawing.Point(600, 520);
+            this.OkButton.Name = "OkButton";
+            this.OkButton.Size = new System.Drawing.Size(125, 30);
+            this.OkButton.TabIndex = 4;
+            this.OkButton.Text = "OK";
+            this.OkButton.UseVisualStyleBackColor = true;
+            this.OkButton.Click += new System.EventHandler(this.SaveButton_Click);
             // 
             // NoteForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(884, 561);
-            this.Controls.Add(this.SaveButton);
+            this.Controls.Add(this.OkButton);
             this.Controls.Add(this.CancelButton);
             this.Controls.Add(this.TitleTextBox);
             this.Controls.Add(this.NoteTextBox);
@@ -195,6 +195,6 @@ namespace NoteApp.View
         private System.Windows.Forms.TextBox NoteTextBox;
         private System.Windows.Forms.TextBox TitleTextBox;
         private new System.Windows.Forms.Button CancelButton;
-        private System.Windows.Forms.Button SaveButton;
+        private System.Windows.Forms.Button OkButton;
     }
 }

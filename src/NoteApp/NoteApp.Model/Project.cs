@@ -7,19 +7,24 @@ namespace NoteApp.Model
     /// Класс,который хранит все заметки.
     /// </summary>
     public class Project
-    {// TODO: xml
+    {
+        /// <summary>
+        /// Конструктор проекта.
+        /// </summary>
         public Project()
         {
             Notes = new List<Note>();
-        } // TODO: пустые строки
+        }
+
         /// <summary>
         /// Список с заметками.
         /// </summary>
         public List<Note> Notes { get; set; } = new List<Note>();
 
-        // <summary>
+        /// <summary>
         /// Функция сортировки всех заметок по дате редактирования.
         /// </summary>
+        /// <param name="notes">Передаваемый список заметок</param>
         public List<Note> SortByModificationTime(List<Note> notes)
         {
             notes = notes.OrderByDescending(note =>
