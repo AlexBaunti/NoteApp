@@ -46,70 +46,70 @@ namespace NoteApp.View
             // TitleLabel
             // 
             this.TitleLabel.AutoSize = true;
-            this.TitleLabel.Font = new System.Drawing.Font("Cuprum", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.TitleLabel.Location = new System.Drawing.Point(18, 18);
+            this.TitleLabel.Font = new System.Drawing.Font("Verdana", 11F);
+            this.TitleLabel.Location = new System.Drawing.Point(20, 20);
             this.TitleLabel.Name = "TitleLabel";
-            this.TitleLabel.Size = new System.Drawing.Size(44, 22);
+            this.TitleLabel.Size = new System.Drawing.Size(45, 18);
             this.TitleLabel.TabIndex = 0;
             this.TitleLabel.Text = "Title:";
             // 
             // CategoryLabel
             // 
             this.CategoryLabel.AutoSize = true;
-            this.CategoryLabel.Font = new System.Drawing.Font("Cuprum", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.CategoryLabel.Location = new System.Drawing.Point(18, 48);
+            this.CategoryLabel.Font = new System.Drawing.Font("Verdana", 11F);
+            this.CategoryLabel.Location = new System.Drawing.Point(20, 50);
             this.CategoryLabel.Name = "CategoryLabel";
-            this.CategoryLabel.Size = new System.Drawing.Size(79, 22);
+            this.CategoryLabel.Size = new System.Drawing.Size(84, 18);
             this.CategoryLabel.TabIndex = 0;
             this.CategoryLabel.Text = "Category:";
             // 
             // CreatedLabel
             // 
             this.CreatedLabel.AutoSize = true;
-            this.CreatedLabel.Font = new System.Drawing.Font("Cuprum", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.CreatedLabel.Location = new System.Drawing.Point(18, 78);
+            this.CreatedLabel.Font = new System.Drawing.Font("Verdana", 11F);
+            this.CreatedLabel.Location = new System.Drawing.Point(20, 80);
             this.CreatedLabel.Name = "CreatedLabel";
-            this.CreatedLabel.Size = new System.Drawing.Size(70, 22);
+            this.CreatedLabel.Size = new System.Drawing.Size(74, 18);
             this.CreatedLabel.TabIndex = 0;
             this.CreatedLabel.Text = "Created:";
             // 
             // ModifiedLlabel
             // 
             this.ModifiedLlabel.AutoSize = true;
-            this.ModifiedLlabel.Font = new System.Drawing.Font("Cuprum", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.ModifiedLlabel.Location = new System.Drawing.Point(278, 78);
+            this.ModifiedLlabel.Font = new System.Drawing.Font("Verdana", 11F);
+            this.ModifiedLlabel.Location = new System.Drawing.Point(278, 80);
             this.ModifiedLlabel.Name = "ModifiedLlabel";
-            this.ModifiedLlabel.Size = new System.Drawing.Size(77, 22);
+            this.ModifiedLlabel.Size = new System.Drawing.Size(76, 18);
             this.ModifiedLlabel.TabIndex = 0;
             this.ModifiedLlabel.Text = "Modified:";
             // 
             // DateTimePickerModified
             // 
             this.DateTimePickerModified.CalendarFont = new System.Drawing.Font("Cuprum", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.DateTimePickerModified.Font = new System.Drawing.Font("Cuprum", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.DateTimePickerModified.Font = new System.Drawing.Font("Verdana", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.DateTimePickerModified.Format = System.Windows.Forms.DateTimePickerFormat.Short;
-            this.DateTimePickerModified.Location = new System.Drawing.Point(363, 76);
+            this.DateTimePickerModified.Location = new System.Drawing.Point(363, 78);
             this.DateTimePickerModified.Name = "DateTimePickerModified";
-            this.DateTimePickerModified.Size = new System.Drawing.Size(140, 25);
+            this.DateTimePickerModified.Size = new System.Drawing.Size(140, 23);
             this.DateTimePickerModified.TabIndex = 1;
             // 
             // DateTimePickerCreated
             // 
-            this.DateTimePickerCreated.Font = new System.Drawing.Font("Cuprum", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.DateTimePickerCreated.Font = new System.Drawing.Font("Verdana", 10F);
             this.DateTimePickerCreated.Format = System.Windows.Forms.DateTimePickerFormat.Short;
-            this.DateTimePickerCreated.Location = new System.Drawing.Point(113, 76);
+            this.DateTimePickerCreated.Location = new System.Drawing.Point(113, 78);
             this.DateTimePickerCreated.Name = "DateTimePickerCreated";
-            this.DateTimePickerCreated.Size = new System.Drawing.Size(140, 25);
+            this.DateTimePickerCreated.Size = new System.Drawing.Size(140, 24);
             this.DateTimePickerCreated.TabIndex = 1;
             // 
             // CategoryComboBox
             // 
-            this.CategoryComboBox.Font = new System.Drawing.Font("Cuprum", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.CategoryComboBox.Font = new System.Drawing.Font("Verdana", 9F);
             this.CategoryComboBox.ForeColor = System.Drawing.SystemColors.WindowText;
             this.CategoryComboBox.FormattingEnabled = true;
-            this.CategoryComboBox.Location = new System.Drawing.Point(113, 47);
+            this.CategoryComboBox.Location = new System.Drawing.Point(113, 48);
             this.CategoryComboBox.Name = "CategoryComboBox";
-            this.CategoryComboBox.Size = new System.Drawing.Size(240, 23);
+            this.CategoryComboBox.Size = new System.Drawing.Size(240, 22);
             this.CategoryComboBox.TabIndex = 2;
             this.CategoryComboBox.Click += new System.EventHandler(this.CategoryComboBox_Click);
             // 
@@ -118,7 +118,7 @@ namespace NoteApp.View
             this.NoteTextBox.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.NoteTextBox.Font = new System.Drawing.Font("Cuprum", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.NoteTextBox.Font = new System.Drawing.Font("Verdana", 11F);
             this.NoteTextBox.Location = new System.Drawing.Point(22, 110);
             this.NoteTextBox.Multiline = true;
             this.NoteTextBox.Name = "NoteTextBox";
@@ -128,17 +128,17 @@ namespace NoteApp.View
             // 
             // TitleTextBox
             // 
-            this.TitleTextBox.Font = new System.Drawing.Font("Cuprum", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.TitleTextBox.Font = new System.Drawing.Font("Verdana", 9F);
             this.TitleTextBox.Location = new System.Drawing.Point(113, 18);
             this.TitleTextBox.Name = "TitleTextBox";
-            this.TitleTextBox.Size = new System.Drawing.Size(750, 22);
+            this.TitleTextBox.Size = new System.Drawing.Size(749, 22);
             this.TitleTextBox.TabIndex = 3;
             this.TitleTextBox.TextChanged += new System.EventHandler(this.TitleTextBox_TextChanged);
             // 
             // CancelButton
             // 
             this.CancelButton.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
-            this.CancelButton.Font = new System.Drawing.Font("Cuprum", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.CancelButton.Font = new System.Drawing.Font("Verdana", 11F);
             this.CancelButton.Location = new System.Drawing.Point(740, 520);
             this.CancelButton.Name = "CancelButton";
             this.CancelButton.Size = new System.Drawing.Size(125, 30);
@@ -150,7 +150,7 @@ namespace NoteApp.View
             // OkButton
             // 
             this.OkButton.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
-            this.OkButton.Font = new System.Drawing.Font("Cuprum", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.OkButton.Font = new System.Drawing.Font("Verdana", 11F);
             this.OkButton.Location = new System.Drawing.Point(600, 520);
             this.OkButton.Name = "OkButton";
             this.OkButton.Size = new System.Drawing.Size(125, 30);

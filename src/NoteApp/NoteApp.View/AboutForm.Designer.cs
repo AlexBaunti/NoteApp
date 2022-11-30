@@ -43,70 +43,70 @@ namespace NoteApp.View
             // NoteAppLabel
             // 
             this.NoteAppLabel.AutoSize = true;
-            this.NoteAppLabel.Font = new System.Drawing.Font("Cuprum", 28F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.NoteAppLabel.Font = new System.Drawing.Font("Verdana", 24F);
             this.NoteAppLabel.Location = new System.Drawing.Point(15, 10);
             this.NoteAppLabel.Name = "NoteAppLabel";
-            this.NoteAppLabel.Size = new System.Drawing.Size(149, 45);
+            this.NoteAppLabel.Size = new System.Drawing.Size(165, 38);
             this.NoteAppLabel.TabIndex = 0;
             this.NoteAppLabel.Text = "Note App";
             // 
             // VersionLabel
             // 
             this.VersionLabel.AutoSize = true;
-            this.VersionLabel.Font = new System.Drawing.Font("Cuprum", 14F);
-            this.VersionLabel.Location = new System.Drawing.Point(19, 55);
+            this.VersionLabel.Font = new System.Drawing.Font("Verdana", 12F);
+            this.VersionLabel.Location = new System.Drawing.Point(20, 60);
             this.VersionLabel.Name = "VersionLabel";
-            this.VersionLabel.Size = new System.Drawing.Size(57, 22);
+            this.VersionLabel.Size = new System.Drawing.Size(70, 18);
             this.VersionLabel.TabIndex = 0;
             this.VersionLabel.Text = "v. 1.0.0";
             // 
             // AuthorLabel
             // 
             this.AuthorLabel.AutoSize = true;
-            this.AuthorLabel.Font = new System.Drawing.Font("Cuprum", 14F);
-            this.AuthorLabel.Location = new System.Drawing.Point(19, 80);
+            this.AuthorLabel.Font = new System.Drawing.Font("Verdana", 12F);
+            this.AuthorLabel.Location = new System.Drawing.Point(20, 85);
             this.AuthorLabel.Name = "AuthorLabel";
-            this.AuthorLabel.Size = new System.Drawing.Size(163, 22);
+            this.AuthorLabel.Size = new System.Drawing.Size(189, 18);
             this.AuthorLabel.TabIndex = 0;
             this.AuthorLabel.Text = "Author: Alex Izbyshev";
             // 
             // CcLabel
             // 
             this.CcLabel.AutoSize = true;
-            this.CcLabel.Font = new System.Drawing.Font("Cuprum", 12F);
-            this.CcLabel.Location = new System.Drawing.Point(20, 200);
+            this.CcLabel.Font = new System.Drawing.Font("Verdana", 10F);
+            this.CcLabel.Location = new System.Drawing.Point(20, 195);
             this.CcLabel.Name = "CcLabel";
-            this.CcLabel.Size = new System.Drawing.Size(134, 17);
+            this.CcLabel.Size = new System.Drawing.Size(166, 17);
             this.CcLabel.TabIndex = 0;
             this.CcLabel.Text = "2022 Alex Izbyshev ©";
             // 
             // EmailLabel
             // 
             this.EmailLabel.AutoSize = true;
-            this.EmailLabel.Font = new System.Drawing.Font("Cuprum", 12F);
+            this.EmailLabel.Font = new System.Drawing.Font("Verdana", 10F);
             this.EmailLabel.Location = new System.Drawing.Point(20, 125);
             this.EmailLabel.Name = "EmailLabel";
-            this.EmailLabel.Size = new System.Drawing.Size(129, 17);
+            this.EmailLabel.Size = new System.Drawing.Size(152, 17);
             this.EmailLabel.TabIndex = 0;
             this.EmailLabel.Text = "E-mail for Feedback:";
             // 
             // GitLabel
             // 
             this.GitLabel.AutoSize = true;
-            this.GitLabel.Font = new System.Drawing.Font("Cuprum", 12F);
+            this.GitLabel.Font = new System.Drawing.Font("Verdana", 10F);
             this.GitLabel.Location = new System.Drawing.Point(20, 150);
             this.GitLabel.Name = "GitLabel";
-            this.GitLabel.Size = new System.Drawing.Size(49, 17);
+            this.GitLabel.Size = new System.Drawing.Size(62, 17);
             this.GitLabel.TabIndex = 0;
             this.GitLabel.Text = "GitHub:";
             // 
             // EmailLinkLabel
             // 
             this.EmailLinkLabel.AutoSize = true;
-            this.EmailLinkLabel.Font = new System.Drawing.Font("Cuprum", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.EmailLinkLabel.Location = new System.Drawing.Point(155, 125);
+            this.EmailLinkLabel.Font = new System.Drawing.Font("Verdana", 10F);
+            this.EmailLinkLabel.Location = new System.Drawing.Point(172, 125);
             this.EmailLinkLabel.Name = "EmailLinkLabel";
-            this.EmailLinkLabel.Size = new System.Drawing.Size(115, 17);
+            this.EmailLinkLabel.Size = new System.Drawing.Size(138, 17);
             this.EmailLinkLabel.TabIndex = 1;
             this.EmailLinkLabel.TabStop = true;
             this.EmailLinkLabel.Text = "aizbyshev@mail.ru";
@@ -114,10 +114,10 @@ namespace NoteApp.View
             // GitLinkLabel
             // 
             this.GitLinkLabel.AutoSize = true;
-            this.GitLinkLabel.Font = new System.Drawing.Font("Cuprum", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.GitLinkLabel.Location = new System.Drawing.Point(75, 150);
+            this.GitLinkLabel.Font = new System.Drawing.Font("Verdana", 10F);
+            this.GitLinkLabel.Location = new System.Drawing.Point(88, 150);
             this.GitLinkLabel.Name = "GitLinkLabel";
-            this.GitLinkLabel.Size = new System.Drawing.Size(193, 17);
+            this.GitLinkLabel.Size = new System.Drawing.Size(235, 17);
             this.GitLinkLabel.TabIndex = 1;
             this.GitLinkLabel.TabStop = true;
             this.GitLinkLabel.Text = "github.com/AlexBaunti/NoteApp";
