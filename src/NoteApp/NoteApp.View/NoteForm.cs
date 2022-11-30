@@ -43,7 +43,7 @@ namespace NoteApp.View
                 CategoryComboBox.Items.Add(value.ToString());
             }
             TitleTextBox.Text = "Unnamed Note";
-            CategoryComboBox.SelectedIndex = 0;
+            CategoryComboBox.SelectedIndex = 7;
         }
 
         /// <summary>

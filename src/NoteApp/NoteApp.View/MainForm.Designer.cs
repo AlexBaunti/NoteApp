@@ -265,7 +265,7 @@ namespace NoteApp.View
             // 
             this.ShowCategoryLabel.AutoSize = true;
             this.ShowCategoryLabel.Font = new System.Drawing.Font("Verdana", 11F);
-            this.ShowCategoryLabel.Location = new System.Drawing.Point(10, 17);
+            this.ShowCategoryLabel.Location = new System.Drawing.Point(10, 16);
             this.ShowCategoryLabel.Name = "ShowCategoryLabel";
             this.ShowCategoryLabel.Size = new System.Drawing.Size(124, 18);
             this.ShowCategoryLabel.TabIndex = 1;
@@ -276,13 +276,13 @@ namespace NoteApp.View
             this.FileToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.ExitToolStripMenuItem});
             this.FileToolStripMenuItem.Name = "FileToolStripMenuItem";
-            this.FileToolStripMenuItem.Size = new System.Drawing.Size(42, 21);
+            this.FileToolStripMenuItem.Size = new System.Drawing.Size(44, 22);
             this.FileToolStripMenuItem.Text = "File";
             // 
             // ExitToolStripMenuItem
             // 
             this.ExitToolStripMenuItem.Name = "ExitToolStripMenuItem";
-            this.ExitToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.ExitToolStripMenuItem.Size = new System.Drawing.Size(103, 22);
             this.ExitToolStripMenuItem.Text = "Exit";
             this.ExitToolStripMenuItem.Click += new System.EventHandler(this.ExitToolStripMenuItem_Click);
             // 
@@ -293,27 +293,27 @@ namespace NoteApp.View
             this.EditNoteToolStripMenuItem,
             this.RemoveNoteToolStripMenuItem});
             this.EditToolStripMenuItem.Name = "EditToolStripMenuItem";
-            this.EditToolStripMenuItem.Size = new System.Drawing.Size(47, 21);
+            this.EditToolStripMenuItem.Size = new System.Drawing.Size(47, 22);
             this.EditToolStripMenuItem.Text = "Edit";
             // 
             // AddToolStripMenuItem
             // 
             this.AddToolStripMenuItem.Name = "AddToolStripMenuItem";
-            this.AddToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.AddToolStripMenuItem.Size = new System.Drawing.Size(179, 22);
             this.AddToolStripMenuItem.Text = "Add";
             this.AddToolStripMenuItem.Click += new System.EventHandler(this.AddToolStripMenuItem_Click);
             // 
             // EditNoteToolStripMenuItem
             // 
             this.EditNoteToolStripMenuItem.Name = "EditNoteToolStripMenuItem";
-            this.EditNoteToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.EditNoteToolStripMenuItem.Size = new System.Drawing.Size(179, 22);
             this.EditNoteToolStripMenuItem.Text = "Edit Note";
             this.EditNoteToolStripMenuItem.Click += new System.EventHandler(this.EditNoteToolStripMenuItem_Click);
             // 
             // RemoveNoteToolStripMenuItem
             // 
             this.RemoveNoteToolStripMenuItem.Name = "RemoveNoteToolStripMenuItem";
-            this.RemoveNoteToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.RemoveNoteToolStripMenuItem.Size = new System.Drawing.Size(179, 22);
             this.RemoveNoteToolStripMenuItem.Text = "Remove Note";
             this.RemoveNoteToolStripMenuItem.Click += new System.EventHandler(this.RemoveNoteToolStripMenuItem_Click);
             // 
@@ -322,13 +322,13 @@ namespace NoteApp.View
             this.HelpToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.AboutToolStripMenuItem});
             this.HelpToolStripMenuItem.Name = "HelpToolStripMenuItem";
-            this.HelpToolStripMenuItem.Size = new System.Drawing.Size(50, 21);
+            this.HelpToolStripMenuItem.Size = new System.Drawing.Size(52, 22);
             this.HelpToolStripMenuItem.Text = "Help";
             // 
             // AboutToolStripMenuItem
             // 
             this.AboutToolStripMenuItem.Name = "AboutToolStripMenuItem";
-            this.AboutToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.AboutToolStripMenuItem.Size = new System.Drawing.Size(120, 22);
             this.AboutToolStripMenuItem.Text = "About";
             this.AboutToolStripMenuItem.Click += new System.EventHandler(this.AboutToolStripMenuItem_Click);
             // 
